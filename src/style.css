@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Press+Start+2P&display=swap');
+
+@import "tailwindcss";
+
+@theme{
+  --color-primary: #112240;
+  --color-seconday: #1B2A41;
+  --color-accent: #64FFDA;
+  --color-offwhite: #CCD6F6;
+  --font-family: "Fira Code";
+  --font-family-secondary: "Press Start 2P";
+}
+
+.underline-hover::before {
+  @apply content-[''] absolute block w-full h-[3px] bottom-0 left-0 bg-accent scale-x-0 transition-transform duration-300 ease-in-out origin-left;
+}
+
+.group:hover .underline-hover::before {
+  @apply scale-x-100;
+}
+
+/* .header-main-container{
+  @apply 
+} */
+
+.typed-cursor{
+  @apply text-accent;
+}
+

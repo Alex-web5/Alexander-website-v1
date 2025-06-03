@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./src/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body class="bg-primary font-family">
+    <header class="mx-5 my-5 md:mx-10 md:my-10 bg-offwhite/10 h-screen">
+      <!-- header title -->
+       <div class="flex justify-between">
+            <div class="text-offwhite md:text-4xl px-4 py-4 font-bold relative -mt-7 md:-mt-9">Xander Studio <span class="text-accent">.</span> </div>
+            <!-- Hamburger Menu Button (Mobile) -->
+            <button id="menu-btn" class="text-offwhite text-4xl focus:outline-none md:hidden p-5 z-20">
+              ☰
+            </button>
+
+          <!-- Mobile Menu -->
+          <div id="mobile-menu" class="fixed top-0 left-0 w-full h-0 overflow-hidden bg-primary flex flex-col items-center justify-center space-y-8 text-2xl text-white transition-all duration-900 ease-in-out z-10">
+            <ul>
+              <li class="py-10"><a href="">Home</a></li>
+              <li class="py-5"><a href="">About</a></li>
+              <li class="py-5"><a href="">My Work</a></li>
+              <li class="py-10"><a href="">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+      <!-- header Navigation -->
+       <div class="bg-seconday md:w-180 hidden md:block p-5 rounded-full m-auto text-2xl">
+        <ul class="flex justify-between text-offwhite">
+          <li>
+              <a href="#" class="group relative inline-block text-offwhite hover:text-accent">
+                Home
+                <span class="absolute left-0 bottom-0 h-[2px] w-full origin-left scale-x-0 bg-current transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
+              </a>
+          </li>
+          <li>
+              <a href="#" class="group relative inline-block text-offwhite hover:text-accent">
+                About
+                <span class="absolute left-0 bottom-0 h-[2px] w-full origin-left scale-x-0 bg-current transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
+              </a>
+          </li>
+          <li>
+              <a href="#" class="group relative inline-block text-offwhite hover:text-accent">
+                My Work
+                <span class="absolute left-0 bottom-0 h-[2px] w-full origin-left scale-x-0 bg-current transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
+              </a>
+          </li>
+          <li>
+              <a href="#" class="group relative inline-block text-offwhite hover:text-accent">
+                Contact
+                <span class="absolute left-0 bottom-0 h-[2px] w-full origin-left scale-x-0 bg-current transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
+              </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- main body section -->
+      <div class="">
+        <div class="flex flex-col justify-center items-center text-offwhite px-4 py-10">
+        <h1 class="text-3xl pb-4">Hi ALexander Here !</h1>
+        <h2 class="font-family-secondary text-2xl"> > <span id="auto-type" class="text-accent typed-cursor"></span></h2>
+        <!-- <p class="text-accent">> Full-Stack Developer _</p> -->
+        <div>
+          <h2 class="p-4 pb-0 pl-0">Based In Lagos</h2>
+          <div class="w-34 h-1 bg-accent"></div>
+        </div>
+        <p class="p-4 text-3xl text-center">I’m a passionate developer with a love for creating efficient and aesthetic web solutions. Always learning. Always building.</p>
+        <!-- Btn--> 
+        <button class="cursor-pointer flex justify-between bg-seconday px-3 py-2 rounded-full text-white tracking-wider shadow-xl hover:bg-primary hover:scale-105 duration-500 hover:ring-1 hover:ring-accent font-mono w-[200px]"
+        >
+         Dowonload Resume
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            class="w-5 h-5 animate-bounce text-accent"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"
+            ></path>
+          </svg>
+        </button>
+
+      </div>
+      </div>
+    </header>
+    <script type="module" src="/src/main.js"></script>
+    <!-- Typed libery -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  </body>
+</html>
