@@ -1,97 +1,329 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="stylesheet" href="./src/style.css">
+    <!-- Devicons link -->
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />   
+    <!-- Gsap link -->
+     <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.13/dist/gsap.min.js"></script> -->
+     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
   <body class="bg-primary font-family">
-    <header class="mx-5 my-5 md:mx-10 md:my-10 bg-offwhite/10 h-screen">
-      <!-- header title -->
-       <div class="flex justify-between">
-            <div class="text-offwhite md:text-4xl px-4 py-4 font-bold relative -mt-7 md:-mt-9">Xander Studio <span class="text-accent">.</span> </div>
-            <!-- Hamburger Menu Button (Mobile) -->
-            <button id="menu-btn" class="text-offwhite text-4xl focus:outline-none md:hidden p-5 z-20">
-              ☰
-            </button>
-
-          <!-- Mobile Menu -->
-          <div id="mobile-menu" class="fixed top-0 left-0 w-full h-0 overflow-hidden bg-primary flex flex-col items-center justify-center space-y-8 text-2xl text-white transition-all duration-900 ease-in-out z-10">
-            <ul>
-              <li class="py-10"><a href="">Home</a></li>
-              <li class="py-5"><a href="">About</a></li>
-              <li class="py-5"><a href="">My Work</a></li>
-              <li class="py-10"><a href="">Contact</a></li>
-            </ul>
-          </div>
+    <header class="mx-5 my-5 md:mx-10 md:my-10 bg-offwhite/10 md:h-screen">
+      <!-- Title -->
+      <div class="flex justify-between items-center">
+        <div class="text-offwhite md:text-4xl px-4 py-4 font-extrabold tracking-wide -mt-7 md:-mt-9">
+          Xander Studio <span class="text-accent">.</span>
         </div>
 
-      <!-- header Navigation -->
-       <div class="bg-seconday md:w-180 hidden md:block p-5 rounded-full m-auto text-2xl">
-        <ul class="flex justify-between text-offwhite">
-          <li>
-              <a href="#" class="group relative inline-block text-offwhite hover:text-accent">
-                Home
-                <span class="absolute left-0 bottom-0 h-[2px] w-full origin-left scale-x-0 bg-current transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
-              </a>
-          </li>
-          <li>
-              <a href="#" class="group relative inline-block text-offwhite hover:text-accent">
-                About
-                <span class="absolute left-0 bottom-0 h-[2px] w-full origin-left scale-x-0 bg-current transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
-              </a>
-          </li>
-          <li>
-              <a href="#" class="group relative inline-block text-offwhite hover:text-accent">
-                My Work
-                <span class="absolute left-0 bottom-0 h-[2px] w-full origin-left scale-x-0 bg-current transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
-              </a>
-          </li>
-          <li>
-              <a href="#" class="group relative inline-block text-offwhite hover:text-accent">
-                Contact
-                <span class="absolute left-0 bottom-0 h-[2px] w-full origin-left scale-x-0 bg-current transition-transform duration-300 ease-in-out group-hover:scale-x-100"></span>
-              </a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- main body section -->
-      <div class="">
-        <div class="flex flex-col justify-center items-center text-offwhite px-4 py-10">
-        <h1 class="text-3xl pb-4">Hi ALexander Here !</h1>
-        <h2 class="font-family-secondary text-2xl"> > <span id="auto-type" class="text-accent typed-cursor"></span></h2>
-        <!-- <p class="text-accent">> Full-Stack Developer _</p> -->
-        <div>
-          <h2 class="p-4 pb-0 pl-0">Based In Lagos</h2>
-          <div class="w-34 h-1 bg-accent"></div>
-        </div>
-        <p class="p-4 text-3xl text-center">I’m a passionate developer with a love for creating efficient and aesthetic web solutions. Always learning. Always building.</p>
-        <!-- Btn--> 
-        <button class="cursor-pointer flex justify-between bg-seconday px-3 py-2 rounded-full text-white tracking-wider shadow-xl hover:bg-primary hover:scale-105 duration-500 hover:ring-1 hover:ring-accent font-mono w-[200px]"
-        >
-         Dowonload Resume
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            class="w-5 h-5 animate-bounce text-accent"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"
-            ></path>
-          </svg>
+        <!-- Hamburger Menu -->
+        <button id="menu-btn" class="text-offwhite text-4xl focus:outline-none md:hidden p-5 z-20">
+          ☰
         </button>
 
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="fixed top-0 left-0 w-full h-0 overflow-hidden bg-primary flex flex-col items-center justify-center text-center space-y-8 text-2xl text-white transition-all duration-900 ease-in-out z-10">
+          <ul>
+            <li class="py-10"><a href="#home">Home</a></li>
+            <li class="py-5"><a href="#about">About</a></li>
+            <li class="py-5"><a href="#portfolio">My Work</a></li>
+            <li class="py-10"><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
       </div>
+
+      <!-- Desktop Nav -->
+      <nav class="bg-seconday md:w-180 hidden md:block p-4 rounded-full m-auto text-xl">
+        <ul class="flex justify-between text-offwhite font-medium">
+          <li><a href="#home" class="group relative inline-block hover:text-accent">Home<span class="underline-hover"></span></a></li>
+          <li><a href="#about" class="group relative inline-block hover:text-accent">About<span class="underline-hover"></span></a></li>
+          <li><a href="#portfolio" class="group relative inline-block hover:text-accent">My Work<span class="underline-hover"></span></a></li>
+          <li><a href="#contact" class="group relative inline-block hover:text-accent">Contact<span class="underline-hover"></span></a></li>
+        </ul>
+      </nav>
+
+      <!-- Main Body -->
+      <div class="flex flex-col justify-center items-center text-offwhite px-4 py-10 space-y-4 max-w-3xl mx-auto" id="home">
+        <h1 class="text-4xl md:text-6xl font-extrabold text-center leading-tight">Hey, I'm Alexander 👋</h1>
+        <!-- <h6 class="text-1xl md:text-2xl font-bold text-center leading-tight">I build things for the web.</h6> -->
+        <h2 class="text-xl md:text-2xl font-mono tracking-wide text-center font-extrabold uppercase">> <span id="auto-type" class="text-accent typed-cursor"></span></h2>
+
+        <span>
+          <h3 class="text-lg md:text-xl text-center text-gray-300 italic">Based in Lagos, Nigeria 🇳🇬</h3>
+          <!-- <div class="bg-accent w-100 h-1"></div> -->
+        </span>
+
+        <p class="text-lg md:text-xl text-center leading-relaxed">
+          I’m a passionate web developer who turns ideas into smooth, functional, and eye-catching experiences. Whether it's frontend polish or backend logic, I bring the same energy — sharp, creative, and always building something better. I believe in progress, not perfection.
+        </p>
+
+        <a href="./src/cv/ALEXANDER OKPEKU CV pdf.pdf" download="" class="mt-6 flex items-center gap-2 bg-seconday px-5 py-3 rounded-full text-white tracking-wider shadow-xl hover:bg-primary hover:scale-105 duration-500 hover:ring-1 hover:ring-accent font-mono">
+          Download Resume
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 animate-bounce text-accent">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+          </svg>
+        </a>
       </div>
     </header>
+
+    <section class="flex flex-col-reverse md:flex-row gap-8 px-5 py-10 md:px-10" id="about">
+      <!-- Video Card Project -->
+      <div class="relative w-full md:w-1/2 bg-offwhite/10 rounded-2xl overflow-hidden shadow-lg">
+        <video
+          src="./src/video/Blue-space-portfolio-2.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+          class="absolute inset-0 w-full h-full object-cover opacity-25 z-0"
+        ></video>
+
+        <div class="relative z-10 p-6 flex flex-col justify-between h-full">
+          <div class="text-xl md:text-2xl font-mono tracking-wide text-offwhite mb-4">
+            <span class="relative pl-6 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-1 before:h-6 before:bg-accent">
+              Featured Project:
+            </span>
+          </div>
+
+        <div class="relative z-10 flex-grow flex flex-col items-center justify-end px-3 py-6">
+          <h6 class="mb-4 text-xl md:text-2xl font-mono tracking-wide text-offwhite font-bold">Let's Cook</h6>
+          <a href="#" class="type1-button group relative h-[50px] w-[150px] rounded-full overflow-hidden transition-all duration-500 ease-in-out">
+          </a>
+        </div>
+        </div>
+      </div>
+
+      <!-- About Section + Tech Stack -->
+      <div class="w-full md:w-1/2 text-offwhite">
+        <div id="about" class="max-w-4xl">
+          <h2 class="text-xl md:text-2xl font-mono tracking-wide pb-4">
+            I Specialize In <br>
+            <span class="text-accent" id="auto-type-dup">> </span>
+          </h2>
+
+          <p class="text-lg leading-relaxed mb-4">
+            Hey, I’m Alexander — a passionate and driven software developer based in Lagos, Nigeria. I build sleek, efficient, and user-focused websites using technologies like <span class="text-accent">JavaScript, Tailwind CSS, Django, and React</span>.
+          </p>
+          <p class="text-lg leading-relaxed mb-4">
+            My coding journey began from a need to solve real-life problems — creating tools that are not only helpful but also beautifully crafted.
+          </p>
+          <p class="text-lg leading-relaxed mb-4">
+            Whether it’s a client project or a creative personal build, I work with a mindset of excellence and growth. I believe the magic lies where clean design meets functionality.
+          </p>
+          <p class="text-lg leading-relaxed">
+            When I’m not coding, you’ll find me reading, leveling up my skills, or cooking up something new — both in the kitchen and in the terminal.
+          </p>
+
+          <!-- Tech Stack -->
+          <div class="mt-10">
+            <div class="relative pl-6 text-xl md:text-3xl font-mono tracking-wide py-2 
+                        before:content-[''] before:absolute before:left-0 before:top-1/2 
+                        before:-translate-y-1/2 before:w-1 before:h-6 before:bg-accent">
+              My Tech Stack
+            </div>
+
+            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 pt-6">
+              <i class="devicon-html5-plain colored text-5xl md:text-6xl"></i>
+              <i class="devicon-tailwindcss-original colored text-5xl md:text-6xl"></i>
+              <i class="devicon-javascript-plain colored text-5xl md:text-6xl"></i>
+              <i class="devicon-react-original colored text-5xl md:text-6xl"></i>
+              <i class="devicon-npm-original-wordmark colored text-5xl md:text-6xl"></i>
+              <i class="devicon-python-plain colored text-5xl md:text-6xl"></i>
+              <i class="devicon-django-plain-wordmark text-5xl md:text-6xl"></i>
+              <i class="devicon-djangorest-line-wordmark text-5xl md:text-6xl"></i>
+              <i class="devicon-postgresql-plain-wordmark colored text-5xl md:text-6xl"></i>
+              <i class="devicon-git-plain-wordmark colored text-5xl md:text-6xl"></i>
+              <i class="devicon-github-original-wordmark text-5xl md:text-6xl"></i>
+              <i class="devicon-figma-plain text-5xl md:text-6xl"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Service and portfolio section -->
+    <section class="bg-offwhite/10" id="portfolio">
+      <div
+        class="relative pl-6 text-xl md:text-3xl tracking-wide text-offwhite py-2 
+        before:content-[''] before:absolute before:left-0 before:top-1/2 
+        before:-translate-y-1/2 before:w-1 before:h-6 before:bg-accent mx-5 my-5 md:mx-10 md:my-10"
+      >
+        Service <br /> & Portfolio
+      </div>
+
+      <!-- portfolio section -->
+      <div class="mx-5 my-5 md:mx-20 md:my-5 text-offwhite text-xl md:text-3xl tracking-wide">
+
+          <!-- Item 1 -->
+          <div class="relative group cursor-pointer transition-colors duration-300" onmouseenter="revealImage(this)" onmouseleave="hideImage(this)">
+            <a href="#" class="flex justify-between items-center p-10 border-b-2 border-offwhite group-hover:bg-offwhite/10 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500 ease-in-out hover:underline hover:text-accent">
+              <p class="z-10">Joematee Nigeria Limited</p>
+              <div class="hidden group-hover:flex gap-2">
+                <i class="devicon-vitejs-plain text-xl md:text-1xl"></i>
+                <i class="devicon-html5-plain colored text-xl md:text-1xl"></i>
+                <i class="devicon-tailwindcss-original colored text-xl md:text-1xl"></i>
+                <i class="devicon-javascript-plain colored text-xl md:text-1xl"></i>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor"
+                class="size-6 z-10 transform transition-all duration-500 ease-in-out group-hover:translate-x-2 group-hover:rotate-12">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+              </svg>
+            </a>
+            <div class="preview-image absolute top-[-100%] left-1/2 ml-5 w-48 h-32 opacity-0 pointer-events-none z-50 transform scale-[200%] rounded-lg shadow-lg overflow-hidden">
+              <img src="/src/img/joematee-portfolio.png" alt="Preview" class="w-full h-full object-cover">
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="relative group cursor-pointer transition-colors duration-300 mt-2" onmouseenter="revealImage(this)" onmouseleave="hideImage(this)">
+            <a href="#" class="flex justify-between items-center p-10 border-b-2 border-offwhite group-hover:bg-offwhite/10 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500 ease-in-out hover:underline hover:text-accent">
+              <p class="z-10">Ovic Evergreen Academy</p>
+              <div class="hidden group-hover:flex gap-2">
+                <i class="devicon-html5-plain colored text-xl md:text-1xl"></i>
+                <i class="devicon-css3-plain-wordmark colored text-xl md:text-1xl"></i>
+                <i class="devicon-javascript-plain colored text-xl md:text-1xl"></i>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor"
+                class="size-6 z-10 transform transition-all duration-500 ease-in-out group-hover:translate-x-2 group-hover:rotate-25">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+              </svg>
+            </a>
+            <div class="preview-image absolute top-[-100%] left-1/2 ml-5 w-48 h-32 opacity-0 pointer-events-none z-50 transform scale-[200%] rounded-lg shadow-lg overflow-hidden">
+              <img src="/src/img/ovic-portfolio.png" alt="Preview" class="w-full h-full object-fit">
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="relative group cursor-pointer transition-colors duration-300 mt-2" onmouseenter="revealImage(this)" onmouseleave="hideImage(this)">
+            <a href="#" class="flex justify-between items-center p-10 border-b-2 border-offwhite group-hover:bg-offwhite/10 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500 ease-in-out hover:underline hover:text-accent">
+              <p class="z-10">Recipe Sharing Platform</p>
+              <div class="hidden group-hover:flex gap-2">
+                <i class="devicon-django-plain-wordmark"></i>
+                <i class="devicon-tailwindcss-original colored text-xl md:text-1xl"></i>
+                <i class="devicon-javascript-plain colored text-xl md:text-1xl"></i>
+                <i class="devicon-sqlite-plain text-xl md:text-1xl"></i>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor"
+                class="size-6 z-10 transform transition-all duration-500 ease-in-out group-hover:translate-x-2 group-hover:rotate-25">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+              </svg>
+            </a>
+            <div class="preview-image absolute top-[-100%] left-1/2 ml-5 w-48 h-32 opacity-0 pointer-events-none z-50 transform scale-[200%] rounded-lg shadow-lg overflow-hidden">
+              <img src="/src/img/xander-food-portfolio.png" alt="Preview" class="w-full h-full object-cover">
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="relative group cursor-pointer transition-colors duration-300 mt-2" onmouseenter="revealImage(this)" onmouseleave="hideImage(this)">
+            <a href="#" class="flex justify-between items-center p-10 border-b-2 border-offwhite group-hover:bg-offwhite/10 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500 ease-in-out hover:underline hover:text-accent">
+              <p class="z-10">Portfolio Website V2.</p>
+              <div class="hidden group-hover:flex gap-2">
+                <i class="devicon-react-original-wordmark colored text-xl md:text-1xl"></i>
+                <i class="devicon-tailwindcss-original colored text-xl md:text-1xl"></i>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor"
+                class="size-6 z-10 transform transition-all duration-500 ease-in-out group-hover:translate-x-2 group-hover:rotate-25">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+              </svg>
+            </a>
+            <div class="preview-image absolute top-[-100%] left-1/2 ml-5 w-48 h-32 opacity-0 pointer-events-none z-50 transform scale-[200%] rounded-lg shadow-lg overflow-hidden">
+              <img src="/src/img/portfolio-portfolio.jpg" alt="Preview" class="w-full h-full object-cover">
+            </div>
+          </div>
+      </div>
+
+      <!-- other noteworthy section -->
+      <div class="px-6 md:px-20 py-10 text-offwhite mx-5 my-5 md:mx-10 md:my-10">
+          <h2 class="text-3xl md:text-4xl font-bold text-offwhite mb-10 text-center">Other Noteworthy Projects</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Project 1 -->
+            <div class="group  rounded-2xl p-6 shadow-lg hover:shadow-xl hover:bg-offwhite/10 transition-all duration-300 ease-in-out">
+              <div class="flex justify-between items-center mb-3">
+                <h3 class="text-xl font-semibold">LAPO MFB Chatbot Frontend</h3>
+                <a href="#" target="_blank" class="text-accent hover:text-white transition-colors duration-300">
+                  <i class="devicon-github-original text-2xl"></i>
+                </a>
+              </div>
+              <p class="text-sm text-gray-300 mb-4">A microfinance bot that answers FAQs, fetches loan info, and helps onboard users.</p>
+              <img src="./src/img/mfb-chatbot-portfolio.png" alt="" class="rounded-lg w-full mb-4 border border-accent">
+              <div class="flex flex-wrap gap-2 text-sm text-accent">
+                <span>Html</span>
+                <span>Css</span>
+                <span>JavaScript</span>
+              </div>
+            </div>
+
+            <!-- Project 2 (Video Preview) -->
+            <div class="group rounded-2xl p-6 shadow-lg hover:shadow-xl hover:bg-offwhite/10 transition-all duration-300 ease-in-out">
+              <div class="flex justify-between items-center mb-3">
+                <h3 class="text-xl font-semibold">Beneficiary Information Management System</h3>
+                <a href="#" target="_blank" class="text-accent hover:text-white transition-colors duration-300">
+                  <i class="devicon-github-original text-2xl"></i>
+                </a>
+              </div>
+              <video class="rounded-lg w-full mb-4 border border-accent" autoplay muted loop>
+                <source src="/src/video/BIMS-portfolio-1.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div class="flex flex-wrap gap-2 text-sm text-accent">
+                <span>Django</span>
+                <span>Bootstrap</span>
+                <span>JavaScript</span>
+                <span>Sqlite</span>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="group rounded-2xl p-6 shadow-lg hover:shadow-xl hover:bg-offwhite/10 transition-all duration-300 ease-in-out">
+              <div class="flex justify-between items-center mb-3">
+                <h3 class="text-xl font-semibold">D. A. Alabi & Co</h3>
+                <a href="#" target="_blank" class="text-accent hover:text-white transition-colors duration-300">
+                  <i class="devicon-github-original text-2xl"></i>
+                </a>
+              </div>
+              <p class="text-sm text-gray-300 mb-4">Redesigned and modernized the website for D. A. Alabi & Co. with a clean, professional look and improved user experience.</p>
+              <img src="./src/img/dabolico-portfolio.png" alt="" class="rounded-lg w-full mb-4 border border-accent">
+              <div class="flex flex-wrap gap-2 text-sm text-accent">
+                <span>HTML</span>
+                <span>BootstrapCss</span>
+                <span>JavaScript</span>
+              </div>
+            </div>
+
+          </div>
+      </div>
+    </section>
+
+    <!-- contact section -->
+    <section class="py-16 text-center text-offwhite mx-5 my-5 md:mx-10 md:my-10" id="contact">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+        <p class="text-lg md:text-xl mb-6">Got a project or idea? I'd love to hear from you!</p>
+        <a href="https://wa.me/+2349022500572" target="_blank"
+          class="inline-block border border-offwhite text-offwhite font-semibold px-6 py-3 rounded-full shadow-lg hover:border-accent hover:text-accent transition duration-300">
+          Contact Me
+        </a>
+      </div>
+    </section>
+
+    <!-- footer -->
+     <section class="mx-5 my-5 md:mx-10 md:my-2">
+      <div>
+        <p class="text-center text-offwhite text-sm md:text-sm">Designed & Developed by Okpeku Alexander .</p>
+      </div>
+     </section>
+
+
     <script type="module" src="/src/main.js"></script>
     <!-- Typed libery -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>

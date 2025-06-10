@@ -27,3 +27,51 @@
   @apply text-accent;
 }
 
+/* Add this to your CSS file */
+.type1-button::before,
+.type1-button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 150px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.type1-button::before {
+  content: "Cook";
+  background-color: #fff;
+  color: #008080;
+  transform: translateY(0px) scale(1.2);
+}
+
+.type1-button::after {
+  content: "🔥🔥🔥";
+  background-color: #008080;
+  color: #fff;
+  transform: translateY(50px);
+}
+
+.type1-button:hover::before {
+  transform: translateY(-50px) scale(0) rotate(120deg);
+}
+
+.type1-button:hover::after {
+  transform: translateY(0) scale(1.2);
+}
+
+
+/* Portflio section image section */
+
+  .preview-img {
+    @apply absolute top-1/2 left-full -translate-y-1/2 ml-4 w-48 h-32 opacity-0 pointer-events-none z-50 transform scale-95 rounded-lg shadow-lg overflow-hidden;
+  }
+
+  .img-style {
+    @apply w-full h-full object-cover;
+  }
