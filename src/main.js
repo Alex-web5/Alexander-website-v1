@@ -36,7 +36,7 @@ const autoTypeElementDup = document.getElementById("auto-type-dup");
 
 if (autoTypeElement && autoTypeElementDup) {
   new Typed("#auto-type", {
-    strings: ["Software Developer", "Full-Stack Developer", "Batman"],
+    strings: ["Software Developer", "Full-Stack Developer"],
     typeSpeed: 150,
     backSpeed: 150,
     loop: true,
@@ -83,34 +83,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 });
-
-// function revealImage(id) {
-//     const image = document.getElementById(id);
-//     gsap.to(image, {
-//       opacity: 1,
-//       scale: 1,
-//       duration: 0.4,
-//       ease: "power2.out"
-//     });
-//   }
-
-//   function hideImage(id) {
-//     const image = document.getElementById(id);
-//     gsap.to(image, {
-//       opacity: 0,
-//       scale: 0.95,
-//       duration: 0.3,
-//       ease: "power2.in"
-//     });
-//   }
-
-
-// function revealImage(id) {
-//   const imgDiv = document.getElementById(id);
-//   if (imgDiv) imgDiv.style.display = 'block';
-// }
-
-// function hideImage(id) {
-//   const imgDiv = document.getElementById(id);
-//   if (imgDiv) imgDiv.style.display = 'none';
-// }
