@@ -2,340 +2,1435 @@
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#112240" />
     <link rel="stylesheet" href="./src/style.css">
+    <!-- Font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <!-- Devicons link -->
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />   
-     <!-- Aos link -->
-      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <!-- Aos link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Xander Studio</title>
+    <title>Alexander Okpeku | Full-Stack Software Developer (React, Next.js, .NET)</title>
+    <meta name="description" content="Full-stack software developer building secure banking and enterprise products with Next.js, TypeScript and .NET at LAPO Microfinance Bank. Open to full-stack and frontend engineering roles, and selected freelance projects." />
+    <meta property="og:title" content="Alexander Okpeku | Full-Stack Software Developer" />
+    <meta property="og:description" content="Production banking systems with Next.js, TypeScript and .NET. Open to full-stack / frontend engineering roles and freelance work." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alexanderdevhq.netlify.app/" />
+    <script>
+        try {
+          if (sessionStorage.getItem('pl-seen') !== '1' &&
+              !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.documentElement.classList.add('is-loading');
+          }
+        } catch (e) { document.documentElement.classList.add('is-loading'); }
+    </script>
   </head>
   <body class="bg-primary font-family overflow-x-hidden">
-    <header class="mx-5 my-5 md:mx-10 md:my-10 bg-offwhite/10 md:h-screen">
-      <!-- Title -->
-      <div class="flex justify-between items-center">
-        <div class="text-offwhite md:text-4xl px-4 py-4 font-extrabold tracking-wide -mt-7 md:-mt-9">
-          Xander Studio <span class="text-accent">.</span>
+
+    <!-- ============ Preloader ============ -->
+    <div id="preloader" class="preloader" role="status" aria-live="polite" aria-label="Loading">
+      <div class="pl-panel">
+        <div class="pl-glow" aria-hidden="true"></div>
+
+        <div class="pl-top" data-pl-ui>
+          <span>Full-stack developer</span>
+          <span>Lagos, NG</span>
         </div>
 
-        <!-- Hamburger Menu -->
-        <button id="menu-btn" class="text-offwhite text-4xl focus:outline-none lg:hidden p-5 z-20">
-          ☰
-        </button>
+        <div class="pl-center">
+          <p class="pl-word" aria-hidden="true">
+            <span data-split>Alexander</span><span data-split class="pl-accent">.dev</span>
+          </p>
+        </div>
 
-        <!-- Mobile and Tablet Menu -->
-        <div id="mobile-menu" class="fixed top-0 left-0 w-full h-0 overflow-hidden bg-primary flex flex-col items-center justify-center text-center space-y-8 text-2xl text-white transition-all duration-900 ease-in-out z-10">
-          <ul>
-            <li class="py-10"><a href="#home">Home</a></li>
-            <li class="py-5"><a href="#about">About</a></li>
-            <li class="py-5"><a href="#portfolio">My Work</a></li>
-            <li class="py-10"><a href="#contact">Contact</a></li>
-          </ul>
+        <div class="pl-bottom" data-pl-ui>
+          <div class="pl-track"><span data-pl-bar></span></div>
+          <div class="pl-row">
+            <span class="pl-label">Loading portfolio</span>
+            <span class="pl-count" data-pl-count>000</span>
+          </div>
         </div>
       </div>
+    </div>
 
-      <!-- Desktop Nav -->
-      <nav class="bg-seconday md:w-180 hidden lg:block p-4 rounded-full m-auto text-xl">
-        <ul class="flex justify-between text-offwhite font-medium">
-          <li><a href="#home" class="group relative inline-block hover:text-accent">Home<span class="underline-hover"></span></a></li>
-          <li><a href="#about" class="group relative inline-block hover:text-accent">About<span class="underline-hover"></span></a></li>
-          <li><a href="#portfolio" class="group relative inline-block hover:text-accent">My Work<span class="underline-hover"></span></a></li>
-          <li><a href="#contact" class="group relative inline-block hover:text-accent">Contact<span class="underline-hover"></span></a></li>
-        </ul>
-      </nav>
+    <!-- ===================== HEADER / HERO ===================== -->
+    <header class="relative mx-5 mb-5 mt-24 md:mx-10 md:mb-10 md:mt-28 flex flex-col justify-center overflow-hidden rounded-3xl border border-offwhite/10 bg-offwhite/5 md:min-h-[calc(100vh-7rem)]">
+
+      <div id="site-nav" data-scrolled="false"
+          class="fixed top-0 inset-x-0 z-50 border-b border-transparent transition-all duration-300
+                data-[scrolled=true]:bg-primary/80 data-[scrolled=true]:backdrop-blur-md
+                data-[scrolled=true]:border-offwhite/10 data-[scrolled=true]:shadow-lg">
+          <div class="flex items-center justify-between px-5 py-3 md:px-10 lg:grid lg:grid-cols-[1fr_auto_1fr]">
+            <!-- Logo -->
+            <a href="#home" class="text-offwhite text-xl md:text-2xl font-extrabold tracking-wide">
+              Alexander<span class="text-accent">.dev</span>
+            </a>
+
+            <!-- Desktop nav with sliding highlight -->
+            <nav id="desktop-nav" class="relative hidden lg:block rounded-full border border-offwhite/15 bg-offwhite/5 p-1.5">
+              <span id="nav-pill"
+                class="pointer-events-none absolute left-0 top-1.5 bottom-1.5 w-0 rounded-full bg-accent/20 ring-1 ring-accent/60 opacity-0
+                      transition-[transform,width,opacity] duration-300 ease-out"></span>
+              <ul class="relative flex items-center gap-1 text-offwhite font-medium">
+                <li><a href="#home" data-nav class="block rounded-full px-4 py-2 transition-colors hover:text-accent [&.is-active]:text-accent">Home</a></li>
+                <li><a href="#about" data-nav class="block rounded-full px-4 py-2 transition-colors hover:text-accent [&.is-active]:text-accent">About</a></li>
+                <li><a href="#experience" data-nav class="block rounded-full px-4 py-2 transition-colors hover:text-accent [&.is-active]:text-accent">Experience</a></li>
+                <li><a href="#portfolio" data-nav class="block rounded-full px-4 py-2 transition-colors hover:text-accent [&.is-active]:text-accent">Projects</a></li>
+                <li><a href="#freelance" data-nav class="block rounded-full px-4 py-2 transition-colors hover:text-accent [&.is-active]:text-accent">Freelance</a></li>
+                <li><a href="#contact" data-nav class="block rounded-full px-4 py-2 transition-colors hover:text-accent [&.is-active]:text-accent">Contact</a></li>
+              </ul>
+            </nav>
+
+            <!-- Desktop CTA -->
+            <a href="#contact"
+              class="hidden lg:inline-flex justify-self-end items-center rounded-full bg-accent px-5 py-2 font-semibold text-primary
+                    transition duration-300 hover:scale-105">
+              Hire me
+            </a>
+
+            <!-- Hamburger -->
+            <button id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"
+              class="menu-btn grid lg:hidden">
+              <span class="menu-btn__bar"></span>
+              <span class="menu-btn__bar"></span>
+            </button>
+          </div>
+
+          <!-- Scroll progress -->
+          <div id="scroll-progress" class="absolute bottom-0 left-0 h-[2px] w-0 bg-accent"></div>
+        </div>
+
+        <!-- Mobile / tablet menu -->
+        <div id="mobile-menu" class="mobile-menu fixed inset-0 z-[48] lg:hidden text-offwhite" aria-hidden="true" inert>
+            <div class="mobile-menu__bg" aria-hidden="true"></div>
+            <div class="pointer-events-none absolute -right-24 top-1/3 h-72 w-72 rounded-full bg-accent/10 blur-3xl" aria-hidden="true"></div>
+
+            <div class="mobile-menu__panel">
+              <nav aria-label="Mobile">
+                <ul>
+                  <li class="m-item" style="--i:0"><a href="#home" data-nav class="m-link"><span class="m-num">01</span><span class="m-label">Home</span><span class="m-arrow">→</span></a></li>
+                  <li class="m-item" style="--i:1"><a href="#about" data-nav class="m-link"><span class="m-num">02</span><span class="m-label">About</span><span class="m-arrow">→</span></a></li>
+                  <li class="m-item" style="--i:2"><a href="#experience" data-nav class="m-link"><span class="m-num">03</span><span class="m-label">Experience</span><span class="m-arrow">→</span></a></li>
+                  <li class="m-item" style="--i:3"><a href="#portfolio" data-nav class="m-link"><span class="m-num">04</span><span class="m-label">Projects</span><span class="m-arrow">→</span></a></li>
+                  <li class="m-item" style="--i:4"><a href="#freelance" data-nav class="m-link"><span class="m-num">05</span><span class="m-label">Freelance</span><span class="m-arrow">→</span></a></li>
+                  <li class="m-item" style="--i:5"><a href="#contact" data-nav class="m-link"><span class="m-num">06</span><span class="m-label">Contact</span><span class="m-arrow">→</span></a></li>
+                </ul>
+              </nav>
+
+              <div class="m-item mt-auto pt-10" style="--i:6">
+                <a href="#contact" data-menu-close
+                  class="flex w-full items-center justify-center gap-3 rounded-full bg-accent px-6 py-4 text-xl font-semibold text-primary">
+                  Hire me
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="size-5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>
+                </a>
+                <div class="mt-6 flex items-center justify-between font-mono text-xs tracking-widest text-gray-400">
+                  <a href="/cv/ALEXANDER_OKPEKU_CV.pdf" download class="hover:text-accent">RESUME</a>
+                  <a href="https://github.com/Alex-web5" target="_blank" rel="noopener noreferrer" class="hover:text-accent">GITHUB</a>
+                  <a href="https://wa.me/+2349022500572" target="_blank" rel="noopener noreferrer" class="hover:text-accent">WHATSAPP</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      <!-- Static glow (not animated, so it costs nothing) -->
+      <div class="pointer-events-none absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 w-[min(44rem,90vw)] h-80 rounded-full bg-accent/10 blur-3xl" aria-hidden="true"></div>
 
       <!-- Main Body -->
-      <div class="flex flex-col justify-center items-center text-offwhite px-4 py-10 space-y-4 max-w-3xl mx-auto" id="home" data-aos="zoom-in" data-aos-duration="1000">
-        <h1 class="text-4xl md:text-6xl font-extrabold text-center leading-tight">👋 Hey, I'm Alexander</h1>
-        <!-- <h6 class="text-1xl md:text-2xl font-bold text-center leading-tight">I build things for the web.</h6> -->
-        <h2 class="text-xl md:text-2xl font-mono tracking-wide text-center font-extrabold uppercase">> <span id="auto-type" class="text-accent typed-cursor"></span></h2>
+      <div class="relative flex flex-col items-center text-center text-offwhite w-full max-w-5xl mx-auto px-5 py-16 md:py-24" id="home" data-aos="fade-up" data-aos-duration="900">
 
-        <span>
-          <h3 class="text-lg md:text-xl text-center text-gray-300 italic">Based in Lagos, Nigeria 🇳🇬</h3>
-          <div class="bg-accent w-[100%] h-0.5"></div>
+        <!-- Availability badge -->
+        <span class="inline-flex items-center gap-2 rounded-full border border-accent/60 px-4 py-1 text-sm font-mono tracking-wide">
+          <span class="relative flex h-2 w-2">
+            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75"></span>
+            <span class="relative inline-flex h-2 w-2 rounded-full bg-accent"></span>
+          </span>
+          Open to full-stack &amp; frontend engineering roles
         </span>
 
-        <p class="text-lg md:text-xl text-center leading-relaxed">
-          I’m a passionate web developer who turns ideas into smooth, functional, and eye-catching experiences. Whether it's frontend polish or backend logic, I bring the same energy — sharp, creative, and always building something better.
+        <h1 class="mt-8 text-6xl md:text-8xl lg:text-9xl leading-[0.9]">
+          <span class="block text-gray-400 text-3xl md:text-5xl mb-3">Hello, I’m a</span>
+          <!-- <span class="italic text-accent">Alexander</span> -->
+        </h1>
+
+        <!-- Role swap: words are stacked in one grid cell, JS only fades/slides them -->
+        <div class="mt-6 text-3xl md:text-5xl text-offwhite">
+          <div class="swap-stack" data-swap>
+            <span class="swap-word">Full-Stack Developer</span>
+            <span class="swap-word">Frontend Engineer</span>
+            <span class="swap-word">Next.js + .NET Builder</span>
+            <span class="swap-word">Freelance Web Developer</span>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="flex w-full max-w-md items-center gap-3 my-8">
+          <span class="h-px flex-1 bg-gradient-to-r from-transparent to-accent"></span>
+          <span class="size-2 rotate-45 bg-accent"></span>
+          <span class="h-px flex-1 bg-gradient-to-l from-transparent to-accent"></span>
+        </div>
+
+        <!-- Role + location -->
+        <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-lg md:text-xl text-gray-300 mb-6">
+          <span class="inline-flex items-center gap-2">
+            <span class="font-mono text-accent">&lt;/&gt;</span>
+            Software Developer at <strong class="text-offwhite font-normal">LAPO Microfinance Bank</strong>
+          </span>
+          <span class="hidden sm:block h-1 w-1 rounded-full bg-accent"></span>
+          <span class="inline-flex items-center gap-1.5">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="size-5 text-accent" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+            </svg>
+            Lagos, Nigeria
+            <span class="inline-flex h-3.5 w-5 overflow-hidden rounded-[3px] ring-1 ring-offwhite/20" aria-label="Nigeria flag" role="img">
+              <span class="w-1/3 bg-[#008751]"></span>
+              <span class="w-1/3 bg-white"></span>
+              <span class="w-1/3 bg-[#008751]"></span>
+            </span>
+          </span>
+        </div>
+
+        <p class="text-xl md:text-2xl text-gray-400 leading-relaxed max-w-3xl">
+          I build secure, high-traffic financial products used by real banking customers and bank staff, across React/Next.js (TypeScript) frontends and a .NET 10 back-office API. I care about clean architecture, access control and interfaces people enjoy using.
         </p>
 
-        <a href="/cv/alexander_cv.pdf" download class="mt-6 flex items-center gap-2 bg-seconday px-5 py-3 rounded-full text-white tracking-wider shadow-xl hover:bg-primary hover:scale-105 duration-500 hover:ring-1 hover:ring-accent font-mono">
-          Download Resume
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 animate-bounce text-accent">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
-          </svg>
-        </a>
+        <!-- CTAs -->
+        <div class="mt-10 flex flex-col sm:flex-row items-center gap-4">
+          <a href="#contact"
+            class="group inline-flex items-center gap-3 rounded-full bg-accent px-7 py-3.5 text-lg font-semibold text-primary transition duration-300 hover:scale-105">
+            Get in touch
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"
+              class="size-5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+            </svg>
+          </a>
+          <a href="/cv/ALEXANDER_OKPEKU_CV.pdf" download
+            class="group inline-flex items-center gap-3 rounded-full border border-offwhite/40 px-7 py-3.5 text-lg transition duration-300 hover:border-accent hover:text-accent">
+            Download resume
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"
+              class="size-5 text-accent transition-transform duration-300 group-hover:translate-y-1 animate-bounce" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Tech strip -->
+        <!-- <ul class="mt-14 flex flex-wrap items-center justify-center gap-2 text-xs font-mono text-accent">
+          <li class="rounded-full border border-accent/40 px-3 py-1">Next.js</li>
+          <li class="rounded-full border border-accent/40 px-3 py-1">TypeScript</li>
+          <li class="rounded-full border border-accent/40 px-3 py-1">.NET 10</li>
+          <li class="rounded-full border border-accent/40 px-3 py-1">SQL Server</li>
+          <li class="rounded-full border border-accent/40 px-3 py-1">Azure DevOps</li>
+        </ul> -->
       </div>
     </header>
 
-    <section class="flex flex-col-reverse md:flex-row gap-8 px-5 py-10 md:px-10" id="about">
-      <!-- Video Card Project -->
-      <div class="relative w-full md:w-1/2 bg-offwhite/10 rounded-2xl overflow-hidden shadow-lg">
-        <video
-          src="./src/video/Blue-space-portfolio-2.mp4"
-          autoplay
-          loop
-          muted
-          playsinline
-          class="absolute inset-0 w-full h-full object-cover opacity-25 z-0"
-        ></video>
 
-        <div class="relative z-10 p-6 flex flex-col justify-between h-full">
-          <div class="text-xl md:text-2xl font-mono tracking-wide text-offwhite mb-4">
-            <span class="relative pl-6 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-1 before:h-6 before:bg-accent">
-              Dev Build Highlight:
-            </span>
-          </div>
-
-        <div class="relative z-10 flex-grow flex flex-col items-center justify-end px-3 py-6">
-          <h6 class="mb-4 text-xl md:text-2xl font-mono tracking-wide text-offwhite font-bold">Let's Cook</h6>
-          <a href="#contact" class="type1-button group relative h-[50px] w-[150px] rounded-full overflow-hidden transition-all duration-500 ease-in-out">
-          </a>
+    <!-- ===================== HIGHLIGHTS STRIP ===================== -->
+    <!-- <section class="mx-5 md:mx-10 -mt-2 mb-10" aria-label="Highlights" data-aos="fade-up">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-offwhite text-center">
+        <div class="bg-offwhite/10 rounded-2xl p-5">
+          <p class="text-3xl md:text-4xl font-extrabold text-accent">3</p>
+          <p class="text-sm md:text-base text-gray-300 mt-1">Engineering squads at LAPO</p>
         </div>
+        <div class="bg-offwhite/10 rounded-2xl p-5">
+          <p class="text-3xl md:text-4xl font-extrabold text-accent">4+</p>
+          <p class="text-sm md:text-base text-gray-300 mt-1">Production banking platforms</p>
+        </div>
+        <div class="bg-offwhite/10 rounded-2xl p-5">
+          <p class="text-3xl md:text-4xl font-extrabold text-accent">5</p>
+          <p class="text-sm md:text-base text-gray-300 mt-1">Admin roles with permission-gated UI</p>
+        </div>
+        <div class="bg-offwhite/10 rounded-2xl p-5">
+          <p class="text-3xl md:text-4xl font-extrabold text-accent">Full-stack</p>
+          <p class="text-sm md:text-base text-gray-300 mt-1">Next.js · TypeScript · .NET 10</p>
         </div>
       </div>
+    </section> -->
 
-      <!-- About Section + Tech Stack -->
-      <div class="w-full md:w-1/2 text-offwhite">
-        <div id="about" class="max-w-4xl">
-          <h2 class="text-xl md:text-2xl font-mono tracking-wide pb-4">
-            I Specialize In <br class="md:block lg:hidden">
-            <span class="text-accent" id="auto-type-dup">> </span>
-          </h2>
+    
+<!-- ===================== ABOUT ===================== -->
+    <section class="px-5 py-12 md:px-10 md:py-16 text-offwhite" id="about">
 
-          <p class="text-lg leading-relaxed mb-4">
-            Hey again —— I’m Alexander, a passionate and driven software developer based in Lagos, Nigeria. I create clean, fast, and user-centered websites and web apps using technologies like <span class="text-accent"><strong>JavaScript, Tailwind CSS, Django, and React</strong></span>.
+      <!-- Section Heading -->
+      <div class="relative pl-6 text-xl md:text-3xl tracking-wide py-2
+        before:content-[''] before:absolute before:left-0 before:top-1/2
+        before:-translate-y-1/2 before:w-1 before:h-6 before:bg-accent mb-10"
+        data-aos="fade-up">
+        About Me
+      </div>
+
+      <!-- About Content -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+
+        <!-- Left: Visual Card -->
+        <div class="relative h-full overflow-hidden rounded-2xl" data-aos="fade-right">
+          <video
+            src="./src/video/Blue-space-portfolio-2.mp4"
+            autoplay
+            loop
+            muted
+            playsinline
+            aria-hidden="true"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          </video>
+
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/40 to-primary/10"></div>
+
+          <div class="relative z-10 flex flex-col justify-between h-full min-h-[420px] md:min-h-[540px] p-6 md:p-8">
+
+        <!-- Top: label -->
+        <div>
+          <span class="inline-flex items-center gap-2 rounded-full border border-accent/50 bg-primary/60 backdrop-blur-md px-4 py-2 text-sm font-mono text-accent">
+            <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+            Beyond the Code
+          </span>
+        </div>
+
+        <!-- Bottom: main content -->
+        <div class="space-y-4" data-aos="fade-up">
+
+          <span class="inline-flex items-center rounded-full border border-accent/40 bg-primary/60 px-4 py-2 text-xs tracking-widest text-accent backdrop-blur-sm">
+            Developer · Creator · Problem Solver
+          </span>
+
+          <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white">
+            Building Ideas
+            <br />
+            <span class="text-accent">Into Reality.</span>
+          </h3>
+
+          <p class="max-w-md text-sm md:text-base leading-relaxed text-gray-200">
+            I enjoy exploring technology, creating digital experiences, and turning ideas into solutions that make a difference.
           </p>
-          <p class="text-lg leading-relaxed mb-4">
-            My coding journey began from a need to solve real-life problems — creating tools that are not only helpful but also beautifully crafted.
-          </p>
-          <p class="text-lg leading-relaxed mb-4">
-            Whether it’s a client project or a creative personal build, I work with a mindset of excellence and growth. I believe the magic lies where clean design meets functionality.
-          </p>
-          <p class="text-lg leading-relaxed">
-            When I’m not coding, you’ll find me reading, leveling up my skills, or cooking up something new — both in the kitchen and in the terminal.
-          </p>
+
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="rounded-full bg-white/10 border border-white/20 px-3 py-2 text-xs text-white backdrop-blur-sm">Web Development</span>
+            <span class="rounded-full bg-white/10 border border-white/20 px-3 py-2 text-xs text-white backdrop-blur-sm">Game Development</span>
+            <span class="rounded-full bg-white/10 border border-white/20 px-3 py-2 text-xs text-white backdrop-blur-sm">3D Modelling</span>
+            <span class="rounded-full bg-white/10 border border-white/20 px-3 py-2 text-xs text-white backdrop-blur-sm">Storytelling</span>
+          </div>
+
+        </div>
+      </div>
+        </div>
+
+        <!-- Right: Biography -->
+        <div >
+
+          <!-- Introduction -->
+          <div class="mb-7">
+            <p class="font-mono text-accent text-sm tracking-widest uppercase mb-3">
+              A little about me
+            </p>
+
+            <h3 class="text-2xl md:text-4xl font-bold leading-tight mb-5">
+              Hello, I'm Alexander.
+              <span class="text-accent">I build for the web.</span>
+            </h3>
+
+            <p class="text-base md:text-lg text-gray-300 leading-relaxed mb-4">
+              I'm a software developer with a B.Sc. in Computer Science,
+              currently working at
+              <strong class="text-offwhite">LAPO Microfinance Bank</strong>,
+              where I contribute to production banking and enterprise systems.
+              I work across the stack, building modern interfaces and backend
+              services with
+              <strong class="text-accent">React, Next.js, TypeScript, .NET and SQL Server.</strong>
+            </p>
+
+            <p class="text-base md:text-lg text-gray-300 leading-relaxed mb-4">
+              My approach to development goes beyond making things work.
+              I care about writing maintainable code, building secure systems,
+              understanding the problems I'm solving, and creating interfaces
+              that make complex processes feel simple.
+            </p>
+
+            <p class="text-base md:text-lg text-gray-300 leading-relaxed">
+              Outside software development, I'm interested in 3D character
+              modelling, storytelling, gameplay and development . I enjoy exploring
+              creative ideas and bringing them to life, whether through code,
+              design or visual experiences.
+            </p>
+          </div>
+
+          <!-- Personal Details -->
+          <div class="grid grid-cols-2 gap-4 mb-9">
+
+            <div class="rounded-xl border border-offwhite/10 bg-offwhite/5 p-4">
+              <p class="text-xs text-gray-400 font-mono mb-2">EDUCATION</p>
+              <p class="font-semibold text-offwhite">B.Sc. Computer Science</p>
+            </div>
+
+            <div class="rounded-xl border border-offwhite/10 bg-offwhite/5 p-4">
+              <p class="text-xs text-gray-400 font-mono mb-2">BASED IN</p>
+              <p class="font-semibold text-offwhite">Lagos, Nigeria</p>
+            </div>
+
+          </div>
 
           <!-- Tech Stack -->
-          <div class="mt-10">
-            <div class="relative pl-6 text-xl md:text-3xl font-mono tracking-wide py-2 
-                        before:content-[''] before:absolute before:left-0 before:top-1/2 
-                        before:-translate-y-1/2 before:w-1 before:h-6 before:bg-accent">
-              My Tech Stack
+          <div class="border-t border-offwhite/15 pt-7">
+
+            <div class="flex items-center justify-between flex-wrap gap-3 mb-6">
+              <h4 class="text-xl md:text-2xl font-semibold">
+                My Tech Stack
+              </h4>
+
+              <span class="text-xs font-mono text-accent tracking-wide">
+                TOOLS I WORK WITH
+              </span>
             </div>
 
-            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 pt-6">
-              <i class="devicon-html5-plain colored text-5xl md:text-6xl"></i>
-              <i class="devicon-tailwindcss-original colored text-5xl md:text-6xl"></i>
-              <i class="devicon-javascript-plain colored text-5xl md:text-6xl"></i>
-              <i class="devicon-react-original colored text-5xl md:text-6xl"></i>
-              <i class="devicon-npm-original-wordmark colored text-5xl md:text-6xl"></i>
-              <i class="devicon-python-plain colored text-5xl md:text-6xl"></i>
-              <i class="devicon-django-plain-wordmark text-5xl md:text-6xl"></i>
-              <i class="devicon-djangorest-line-wordmark text-5xl md:text-6xl"></i>
-              <i class="devicon-postgresql-plain-wordmark colored text-5xl md:text-6xl"></i>
-              <i class="devicon-git-plain-wordmark colored text-5xl md:text-6xl"></i>
-              <i class="devicon-github-original-wordmark text-5xl md:text-6xl"></i>
-              <i class="devicon-figma-plain text-5xl md:text-6xl"></i>
+            <div class="grid grid-cols-4 sm:grid-cols-5 gap-3"
+              aria-label="Technologies">
+
+              <div class="group flex items-center justify-center rounded-xl border border-offwhite/10 bg-offwhite/5 p-4 hover:border-accent/60 hover:bg-accent/10 transition-all duration-300" title="React">
+                <i class="devicon-react-original colored text-3xl md:text-4xl group-hover:scale-110 transition-transform"></i>
+              </div>
+
+              <div class="group flex items-center justify-center rounded-xl border border-offwhite/10 bg-offwhite/5 p-4 hover:border-accent/60 hover:bg-accent/10 transition-all duration-300" title="Next.js">
+                <i class="devicon-nextjs-plain text-3xl md:text-4xl group-hover:scale-110 transition-transform"></i>
+              </div>
+
+              <div class="group flex items-center justify-center rounded-xl border border-offwhite/10 bg-offwhite/5 p-4 hover:border-accent/60 hover:bg-accent/10 transition-all duration-300" title="TypeScript">
+                <i class="devicon-typescript-plain colored text-3xl md:text-4xl group-hover:scale-110 transition-transform"></i>
+              </div>
+
+              <div class="group flex items-center justify-center rounded-xl border border-offwhite/10 bg-offwhite/5 p-4 hover:border-accent/60 hover:bg-accent/10 transition-all duration-300" title="JavaScript">
+                <i class="devicon-javascript-plain colored text-3xl md:text-4xl group-hover:scale-110 transition-transform"></i>
+              </div>
+
+              <div class="group flex items-center justify-center rounded-xl border border-offwhite/10 bg-offwhite/5 p-4 hover:border-accent/60 hover:bg-accent/10 transition-all duration-300" title="Tailwind CSS">
+                <i class="devicon-tailwindcss-original colored text-3xl md:text-4xl group-hover:scale-110 transition-transform"></i>
+              </div>
+
+              <div class="group flex items-center justify-center rounded-xl border border-offwhite/10 bg-offwhite/5 p-4 hover:border-accent/60 hover:bg-accent/10 transition-all duration-300" title=".NET">
+                <i class="devicon-dotnetcore-plain colored text-3xl md:text-4xl group-hover:scale-110 transition-transform"></i>
+              </div>
+
+              <div class="group flex items-center justify-center rounded-xl border border-offwhite/10 bg-offwhite/5 p-4 hover:border-accent/60 hover:bg-accent/10 transition-all duration-300" title="C#">
+                <i class="devicon-csharp-plain colored text-3xl md:text-4xl group-hover:scale-110 transition-transform"></i>
+              </div>
+
+              <div class="group flex items-center justify-center rounded-xl border border-offwhite/10 bg-offwhite/5 p-4 hover:border-accent/60 hover:bg-accent/10 transition-all duration-300" title="Python">
+                <i class="devicon-python-plain colored text-3xl md:text-4xl group-hover:scale-110 transition-transform"></i>
+              </div>
+
+              <div class="group flex items-center justify-center rounded-xl border border-offwhite/10 bg-offwhite/5 p-4 hover:border-accent/60 hover:bg-accent/10 transition-all duration-300" title="SQL Server">
+                <i class="devicon-microsoftsqlserver-plain colored text-3xl md:text-4xl group-hover:scale-110 transition-transform"></i>
+              </div>
+
+              <div class="group flex items-center justify-center rounded-xl border border-offwhite/10 bg-offwhite/5 p-4 hover:border-accent/60 hover:bg-accent/10 transition-all duration-300" title="PostgreSQL">
+                <i class="devicon-postgresql-plain colored text-3xl md:text-4xl group-hover:scale-110 transition-transform"></i>
+              </div>
+
             </div>
+
+            <p class="mt-5 text-sm text-gray-400 leading-relaxed">
+              Also familiar with Django, Django REST Framework, Entity Framework Core,
+              ASP.NET Core Web API, Azure DevOps, Docker, Git, GitHub and Figma.
+            </p>
+
           </div>
         </div>
       </div>
     </section>
 
 
-    <!-- Service and portfolio section -->
-    <section class="bg-offwhite/10" id="portfolio">
-      <div
-        class="relative pl-6 text-xl md:text-3xl tracking-wide text-offwhite py-2 
-        before:content-[''] before:absolute before:left-0 before:top-1/2 
-        before:-translate-y-1/2 before:w-1 before:h-6 before:bg-accent mx-5 my-5 md:mx-10 md:my-10"
-      >
-        Service <br /> & Portfolio
+<!-- ===================== EXPERIENCE ===================== -->
+    <section class="px-5 py-16 md:px-10 md:py-24 text-offwhite" id="experience">
+      <div class="relative pl-6 text-xl md:text-3xl tracking-wide py-2
+        before:content-[''] before:absolute before:left-0 before:top-1/2
+        before:-translate-y-1/2 before:w-1 before:h-6 before:bg-accent mb-12 md:mb-16"
+        data-aos="fade-up">
+        Experience
       </div>
+      <div class="max-w-5xl mx-auto">
+      <!-- Timeline -->
+      <div id="exp-timeline" class="relative" style="--col: 280px;">
 
-      <!-- portfolio section -->
-      <div class="mx-5 my-5 md:mx-20 md:my-5 text-offwhite text-xl md:text-3xl tracking-wide">
-        <!-- Item 1 -->
-        <div class="relative group cursor-pointer transition-colors duration-300" onmouseenter="revealImage(this)" onmouseleave="hideImage(this)">
-          <a href="https://jeomatee.netlify.app" target="_blank" class="flex justify-between items-center p-10 border-b-2 border-offwhite group-hover:bg-offwhite/10 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500 ease-in-out hover:underline hover:text-accent">
-            <p class="z-10">Joematee Nigeria Limited</p>
-            <div class="hidden group-hover:flex gap-2">
-              <i class="devicon-vitejs-plain text-xl md:text-1xl"></i>
-              <i class="devicon-html5-plain colored text-xl md:text-1xl"></i>
-              <i class="devicon-tailwindcss-original colored text-xl md:text-1xl"></i>
-              <i class="devicon-javascript-plain colored text-xl md:text-1xl"></i>
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-              stroke-width="1.5" stroke="currentColor"
-              class="size-6 z-10 transform transition-all duration-500 ease-in-out group-hover:translate-x-2 group-hover:rotate-12">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-            </svg>
-          </a>
-          <div class="preview-image hidden md:block absolute top-[-100%] left-1/2 ml-5 w-48 h-32 opacity-0 pointer-events-none z-50 transform scale-[200%] rounded-lg shadow-lg overflow-hidden">
-            <img src="/src/img/joematee-portfolio.png" alt="Preview" class="w-full h-full object-cover">
-          </div>
+        <!-- Line track + scroll fill -->
+        <div class="absolute top-0 bottom-0 left-[5px] md:left-[var(--col)] w-px bg-offwhite/15" aria-hidden="true">
+          <div id="exp-line-fill"
+            class="absolute top-0 left-0 w-px h-0 bg-accent
+            after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2
+            after:w-2 after:h-2 after:rounded-full after:bg-accent
+            after:shadow-[0_0_14px_3px_rgba(255,255,255,0.35)]"></div>
         </div>
 
-        <!-- Item 2 -->
-        <div class="relative group cursor-pointer transition-colors duration-300 mt-2" onmouseenter="revealImage(this)" onmouseleave="hideImage(this)">
-          <a href="https://ovic-evergreen-academy.netlify.app/" target="_blank" class="flex justify-between items-center p-10 border-b-2 border-offwhite group-hover:bg-offwhite/10 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500 ease-in-out hover:underline hover:text-accent">
-            <p class="z-10">Ovic Evergreen Academy</p>
-            <div class="hidden group-hover:flex gap-2">
-              <i class="devicon-html5-plain colored text-xl md:text-1xl"></i>
-              <i class="devicon-css3-plain-wordmark colored text-xl md:text-1xl"></i>
-              <i class="devicon-javascript-plain colored text-xl md:text-1xl"></i>
+        <!-- ============ 1. Current role ============ -->
+        <article data-tl-item class="group relative grid md:grid-cols-[var(--col)_1fr] pl-8 md:pl-0 pb-16 md:pb-24">
+          <div class="md:flex md:items-start md:gap-4 mb-3 md:mb-0 md:pr-6">
+            <span data-tl-dot class="absolute left-0 top-3 md:static md:mt-5 md:shrink-0 size-[10px] rounded-full
+              bg-offwhite/30 transition-all duration-500
+              group-[.is-active]:bg-accent group-[.is-active]:shadow-[0_0_14px_3px_rgba(255,255,255,0.35)]"></span>
+            <div>
+              <p class="font-display italic text-3xl md:text-4xl text-accent leading-none">2025 – Today</p>
+              <p class="font-mono text-xs text-gray-400 mt-2 tracking-wide">Jun 2025 – Present</p>
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-              stroke-width="1.5" stroke="currentColor"
-              class="size-6 z-10 transform transition-all duration-500 ease-in-out group-hover:translate-x-2 group-hover:rotate-25">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-            </svg>
-          </a>
-          <div class="preview-image hidden md:block absolute top-[-100%] left-1/2 ml-5 w-48 h-32 opacity-0 pointer-events-none z-50 transform scale-[200%] rounded-lg shadow-lg overflow-hidden">
-            <img src="/src/img/ovic-portfolio.png" alt="Preview" class="w-full h-full object-cover">
           </div>
+
+          <div class="md:pl-12 opacity-40 group-[.is-active]:opacity-100 transition-opacity duration-700">
+            <h3 class="font-display text-4xl md:text-6xl leading-[0.95] mb-3">Software Developer</h3>
+            <p class="text-sm md:text-base font-medium text-offwhite/90 mb-4">
+              LAPO Microfinance Bank <span class="text-gray-500">—</span> Digital Engineering Team, Lagos
+            </p>
+            <p class="text-sm md:text-base text-gray-400 leading-relaxed max-w-2xl mb-8">
+              Working across three engineering squads on customer-facing and internal banking products. Because these are live banking systems, I can't share links, so here's what I built and owned.
+            </p>
+
+            <div class="space-y-8 max-w-2xl">
+
+              <!-- Core squad -->
+              <div>
+                <p class="font-mono text-accent text-xs tracking-widest mb-1">CORE SQUAD · RETAIL</p>
+                <h4 class="font-display text-2xl md:text-3xl mb-3">Frontend Engineer</h4>
+                <ul class="space-y-2 text-sm md:text-[15px] text-gray-400 leading-relaxed">
+                  <li class="flex gap-3"><span class="text-accent mt-2 size-1 rounded-full bg-accent shrink-0"></span><span>Build and maintain the <strong class="text-offwhite font-medium">Retail Internet Banking</strong> web app in Next.js: BVN verification, OTP, security questions and PIN setup, transfers, bill payments, savings and fixed deposits, loans, standing orders, statements, KYC and support.</span></li>
+                  <li class="flex gap-3"><span class="mt-2 size-1 rounded-full bg-accent shrink-0"></span><span>Took over ownership of the <strong class="text-offwhite font-medium">Omnichannel Back-Office Admin Portal</strong> backend (.NET 10, ASP.NET Core Web API, EF Core, SQL Server) after the original developer left, while evolving its Next.js/TypeScript frontend.</span></li>
+                  <li class="flex gap-3"><span class="mt-2 size-1 rounded-full bg-accent shrink-0"></span><span>Delivered modules for dashboard monitoring, transaction management, customer management, KYC tier-upgrade approval, account opening, BVN watchlist, liveness administration, complaints, device and card management, referrals and reporting.</span></li>
+                  <li class="flex gap-3"><span class="mt-2 size-1 rounded-full bg-accent shrink-0"></span><span>Implemented <strong class="text-offwhite font-medium">role-based access control</strong> (User Admin, Digital Banking Admin, Compliance Officer, Customer Support, Auditor) with permission-gated UI, session-timeout handling and an immutable admin audit-log trail.</span></li>
+                </ul>
+              </div>
+
+              <!-- Nexus squad -->
+              <div>
+                <p class="font-mono text-accent text-xs tracking-widest mb-1">NEXUS SQUAD · CORPORATE</p>
+                <h4 class="font-display text-2xl md:text-3xl mb-3">Frontend Engineer</h4>
+                <ul class="space-y-2 text-sm md:text-[15px] text-gray-400 leading-relaxed">
+                  <li class="flex gap-3"><span class="mt-2 size-1 rounded-full bg-accent shrink-0"></span><span>Build frontend features for the <strong class="text-offwhite font-medium">Corporate Internet Banking</strong> web application serving LAPO's business customers.</span></li>
+                </ul>
+              </div>
+
+              <!-- Meridian squad -->
+              <div>
+                <p class="font-mono text-accent text-xs tracking-widest mb-1">MERIDIAN SQUAD · INTERNAL PROCESS</p>
+                <h4 class="font-display text-2xl md:text-3xl mb-3">Full-Stack Developer</h4>
+                <ul class="space-y-2 text-sm md:text-[15px] text-gray-400 leading-relaxed">
+                  <li class="flex gap-3"><span class="mt-2 size-1 rounded-full bg-accent shrink-0"></span><span>Maintain and ship updates to the <strong class="text-offwhite font-medium">LAPO website</strong> (frontend, backend and CMS).</span></li>
+                  <li class="flex gap-3"><span class="mt-2 size-1 rounded-full bg-accent shrink-0"></span><span>Support internal tools such as the customer onboarding platform and requisition portal.</span></li>
+                  <li class="flex gap-3"><span class="mt-2 size-1 rounded-full bg-accent shrink-0"></span><span>Build LAPO marketing campaign websites and keep bank apps up to date as new internal solutions go live.</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- <div class="flex flex-wrap gap-2 mt-8 text-xs font-mono text-accent">
+              <span class="rounded-full border border-accent/40 px-3 py-1">Azure DevOps CI/CD</span>
+              <span class="rounded-full border border-accent/40 px-3 py-1">Docker</span>
+              <span class="rounded-full border border-accent/40 px-3 py-1">Azure Blob Storage</span>
+              <span class="rounded-full border border-accent/40 px-3 py-1">Key Vault</span>
+            </div> -->
+          </div>
+        </article>
+
+        <!-- ============ 2. NOC ============ -->
+        <article data-tl-item class="group relative grid md:grid-cols-[var(--col)_1fr] pl-8 md:pl-0 pb-14 md:pb-20">
+          <div class="md:flex md:items-start md:gap-4 mb-3 md:mb-0 md:pr-6">
+            <span data-tl-dot class="absolute left-0 top-3 md:static md:mt-4 md:shrink-0 size-[10px] rounded-full
+              bg-offwhite/30 transition-all duration-500
+              group-[.is-active]:bg-accent group-[.is-active]:shadow-[0_0_14px_3px_rgba(255,255,255,0.35)]"></span>
+            <div>
+              <p class="font-display italic text-3xl md:text-4xl text-accent leading-none">2025</p>
+              <p class="font-mono text-xs text-gray-400 mt-2 tracking-wide">Jan – May 2025</p>
+            </div>
+          </div>
+          <div class="md:pl-12 opacity-40 group-[.is-active]:opacity-100 transition-opacity duration-700">
+            <h3 class="font-display text-3xl md:text-5xl leading-[0.95] mb-3">Network Operations Officer (NOC)</h3>
+            <p class="text-sm md:text-base font-medium text-offwhite/90 mb-3">TDS Hitech Limited Solution <span class="text-gray-500">—</span> Lagos</p>
+            <p class="text-sm md:text-base text-gray-400 leading-relaxed max-w-xl">Monitored network systems for uninterrupted enterprise internet service and worked with technical teams to resolve issues.</p>
+          </div>
+        </article>
+
+        <!-- ============ 3. MIS Officer ============ -->
+        <article data-tl-item class="group relative grid md:grid-cols-[var(--col)_1fr] pl-8 md:pl-0 pb-14 md:pb-20">
+          <div class="md:flex md:items-start md:gap-4 mb-3 md:mb-0 md:pr-6">
+            <span data-tl-dot class="absolute left-0 top-3 md:static md:mt-4 md:shrink-0 size-[10px] rounded-full
+              bg-offwhite/30 transition-all duration-500
+              group-[.is-active]:bg-accent group-[.is-active]:shadow-[0_0_14px_3px_rgba(255,255,255,0.35)]"></span>
+            <div>
+              <p class="font-display italic text-3xl md:text-4xl text-accent leading-none">2024</p>
+              <p class="font-mono text-xs text-gray-400 mt-2 tracking-wide">Aug – Dec 2024</p>
+            </div>
+          </div>
+          <div class="md:pl-12 opacity-40 group-[.is-active]:opacity-100 transition-opacity duration-700">
+            <h3 class="font-display text-3xl md:text-5xl leading-[0.95] mb-3">Management Information System Officer</h3>
+            <p class="text-sm md:text-base font-medium text-offwhite/90 mb-3">LAPO NGO <span class="text-gray-500">—</span> Lagos</p>
+            <p class="text-sm md:text-base text-gray-400 leading-relaxed max-w-xl">Managed internal data systems, supported IT operations and maintained software and hardware inventory records.</p>
+          </div>
+        </article>
+
+        <!-- ============ 4. Trainee ============ -->
+        <article data-tl-item class="group relative grid md:grid-cols-[var(--col)_1fr] pl-8 md:pl-0 pb-14 md:pb-20">
+          <div class="md:flex md:items-start md:gap-4 mb-3 md:mb-0 md:pr-6">
+            <span data-tl-dot class="absolute left-0 top-3 md:static md:mt-4 md:shrink-0 size-[10px] rounded-full
+              bg-offwhite/30 transition-all duration-500
+              group-[.is-active]:bg-accent group-[.is-active]:shadow-[0_0_14px_3px_rgba(255,255,255,0.35)]"></span>
+            <div>
+              <p class="font-display italic text-3xl md:text-4xl text-accent leading-none">2024</p>
+              <p class="font-mono text-xs text-gray-400 mt-2 tracking-wide">Jan – Jul 2024</p>
+            </div>
+          </div>
+          <div class="md:pl-12 opacity-40 group-[.is-active]:opacity-100 transition-opacity duration-700">
+            <h3 class="font-display text-3xl md:text-5xl leading-[0.95] mb-3">Software Development Trainee</h3>
+            <p class="text-sm md:text-base font-medium text-offwhite/90 mb-3">Tech365 <span class="text-gray-500">—</span> Lagos</p>
+            <p class="text-sm md:text-base text-gray-400 leading-relaxed max-w-xl">Trained in HTML, CSS, Tailwind, JavaScript, React, Python, Django, Git and deployment, with real-world full-stack tasks.</p>
+          </div>
+        </article>
+
+        <!-- ============ 5. Instructor ============ -->
+        <article data-tl-item class="group relative grid md:grid-cols-[var(--col)_1fr] pl-8 md:pl-0 pb-14 md:pb-20">
+          <div class="md:flex md:items-start md:gap-4 mb-3 md:mb-0 md:pr-6">
+            <span data-tl-dot class="absolute left-0 top-3 md:static md:mt-4 md:shrink-0 size-[10px] rounded-full
+              bg-offwhite/30 transition-all duration-500
+              group-[.is-active]:bg-accent group-[.is-active]:shadow-[0_0_14px_3px_rgba(255,255,255,0.35)]"></span>
+            <div>
+              <p class="font-display italic text-3xl md:text-4xl text-accent leading-none">2022 – 2023</p>
+              <p class="font-mono text-xs text-gray-400 mt-2 tracking-wide">Nov 2022 – Oct 2023</p>
+            </div>
+          </div>
+          <div class="md:pl-12 opacity-40 group-[.is-active]:opacity-100 transition-opacity duration-700">
+            <h3 class="font-display text-3xl md:text-5xl leading-[0.95] mb-3">Coding &amp; Robotics Instructor</h3>
+            <p class="text-sm md:text-base font-medium text-offwhite/90 mb-3">Edubridge Consultants Limited <span class="text-gray-500">—</span> Lagos</p>
+            <p class="text-sm md:text-base text-gray-400 leading-relaxed max-w-xl">Taught coding with Scratch and robotics kits, built lesson plans and mentored students.</p>
+          </div>
+        </article>
+
+        <!-- ============ 6. Education ============ -->
+        <article data-tl-item class="group relative grid md:grid-cols-[var(--col)_1fr] pl-8 md:pl-0">
+          <div class="md:flex md:items-start md:gap-4 mb-3 md:mb-0 md:pr-6">
+            <span data-tl-dot class="absolute left-0 top-3 md:static md:mt-4 md:shrink-0 size-[10px] rounded-full
+              bg-offwhite/30 transition-all duration-500
+              group-[.is-active]:bg-accent group-[.is-active]:shadow-[0_0_14px_3px_rgba(255,255,255,0.35)]"></span>
+            <div>
+              <p class="font-display italic text-3xl md:text-4xl text-accent leading-none">2022</p>
+              <p class="font-mono text-xs text-gray-400 mt-2 tracking-wide">Graduated</p>
+            </div>
+          </div>
+          <div class="md:pl-12 opacity-40 group-[.is-active]:opacity-100 transition-opacity duration-700">
+            <h3 class="font-display text-3xl md:text-5xl leading-[0.95] mb-3">B.Sc. Computer Science</h3>
+            <p class="text-sm md:text-base font-medium text-offwhite/90">Benson Idahosa University <span class="text-gray-500">—</span> Benin City, Edo</p>
+          </div>
+        </article>
         </div>
 
-        <!-- Item 3 -->
-        <div class="relative group cursor-pointer transition-colors duration-300 mt-2" onmouseenter="revealImage(this)" onmouseleave="hideImage(this)">
-          <a href="#" target="_blank" class="flex justify-between items-center p-10 border-b-2 border-offwhite group-hover:bg-offwhite/10 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500 ease-in-out hover:underline hover:text-accent">
-            <p class="z-10">Recipe Sharing Platform</p>
-            <div class="hidden group-hover:flex gap-2">
-              <i class="devicon-django-plain-wordmark"></i>
-              <i class="devicon-tailwindcss-original colored text-xl md:text-1xl"></i>
-              <i class="devicon-javascript-plain colored text-xl md:text-1xl"></i>
-              <i class="devicon-sqlite-plain text-xl md:text-1xl"></i>
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-              stroke-width="1.5" stroke="currentColor"
-              class="size-6 z-10 transform transition-all duration-500 ease-in-out group-hover:translate-x-2 group-hover:rotate-25">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-            </svg>
-          </a>
-          <div class="preview-image hidden md:block absolute top-[-100%] left-1/2 ml-5 w-48 h-32 opacity-0 pointer-events-none z-50 transform scale-[200%] rounded-lg shadow-lg overflow-hidden">
-            <img src="/src/img/xander-food-portfolio.png" alt="Preview" class="w-full h-full object-cover">
-          </div>
+      </div>
+    </section>
+
+
+    <!-- ===================== PORTFOLIO ===================== -->
+<section class="bg-offwhite/10" id="portfolio">
+  <div
+    class="relative pl-6 text-xl md:text-3xl tracking-wide text-offwhite py-2
+    before:content-[''] before:absolute before:left-0 before:top-1/2
+    before:-translate-y-1/2 before:w-1 before:h-6 before:bg-accent mx-5 my-5 md:mx-10 md:my-10"
+  >
+    Selected <br /> Projects
+  </div>
+
+  <!-- ============ Production work (opens case study) ============ -->
+  <div class="mx-5 md:mx-10 mb-16 text-offwhite">
+    <div class="flex flex-wrap items-baseline justify-between gap-2 mb-4 px-2 md:px-6">
+      <h3 class="text-xl md:text-2xl text-accent">Enterprise Projects</h3>
+      <p class="text-sm text-gray-300">Private systems, so no live links. Open any project for the full case study.</p>
+    </div>
+
+    <ul class="project-list border-t border-offwhite/20">
+
+      <li data-aos="fade-up">
+        <button type="button" class="project-row group"
+          data-case="case-admin" data-preview="admin" data-index="01" data-type="Back-office · Full-stack">
+          <span class="row-wipe border-b border-accent bg-accent/10"></span>
+          <span class="row-index">01</span>
+          <span class="row-title group-hover:text-accent" data-row-title>Omnichannel Back-Office Admin Portal</span>
+          <span class="row-tech" aria-hidden="true">
+            <i class="devicon-nextjs-plain"></i>
+            <i class="devicon-typescript-plain colored"></i>
+            <i class="devicon-dotnetcore-plain colored"></i>
+            <i class="devicon-microsoftsqlserver-plain colored"></i>
+          </span>
+          <span class="row-hint">Case study</span>
+          <svg class="row-icon row-icon--plus group-hover:text-accent" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+        </button>
+      </li>
+
+      <li data-aos="fade-up">
+        <button type="button" class="project-row group"
+          data-case="case-rib" data-preview="rib" data-index="02" data-type="Customer web app · Frontend">
+          <span class="row-wipe border-b border-accent bg-accent/10"></span>
+          <span class="row-index">02</span>
+          <span class="row-title group-hover:text-accent" data-row-title>Retail Internet Banking (RIB)</span>
+          <span class="row-tech" aria-hidden="true">
+            <i class="devicon-nextjs-plain"></i>
+            <i class="devicon-react-original colored"></i>
+          </span>
+          <span class="row-hint">Case study</span>
+          <svg class="row-icon row-icon--plus group-hover:text-accent" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+        </button>
+      </li>
+
+      <li data-aos="fade-up">
+        <button type="button" class="project-row group"
+          data-case="case-cib" data-preview="cib" data-index="03" data-type="Business banking · Frontend">
+          <span class="row-wipe border-b border-accent bg-accent/10"></span>
+          <span class="row-index">03</span>
+          <span class="row-title group-hover:text-accent" data-row-title>Corporate Internet Banking (CIB)</span>
+          <span class="row-tech" aria-hidden="true">
+            <i class="devicon-nextjs-plain"></i>
+            <i class="devicon-typescript-plain colored"></i>
+          </span>
+          <span class="row-hint">Case study</span>
+          <svg class="row-icon row-icon--plus group-hover:text-accent" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+        </button>
+      </li>
+
+      <li data-aos="fade-up">
+        <button type="button" class="project-row group"
+          data-case="case-website" data-preview="lapo-web" data-index="04" data-type="Website &amp; CMS · Full-stack">
+          <span class="row-wipe border-b border-accent bg-accent/10"></span>
+          <span class="row-index">04</span>
+          <span class="row-title group-hover:text-accent" data-row-title>LAPO Website &amp; CMS</span>
+          <span class="row-hint">Case study</span>
+          <svg class="row-icon row-icon--plus group-hover:text-accent" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ============ Live & personal projects (opens site) ============ -->
+  <div class="mx-5 md:mx-10 mb-10 text-offwhite">
+        <div class="flex flex-wrap items-baseline justify-between gap-2 mb-4 px-2 md:px-6">
+          <h3 class="text-xl md:text-2xl text-accent">Independent and personal projects</h3>
+          <p class="text-sm text-gray-300">Hover to preview, click to visit.</p>
         </div>
 
-        <!-- Item 4 -->
-        <div class="relative group cursor-pointer transition-colors duration-300 mt-2" onmouseenter="revealImage(this)" onmouseleave="hideImage(this)">
-          <a href="#" target="_blank" class="flex justify-between items-center p-10 border-b-2 border-offwhite group-hover:bg-offwhite/10 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500 ease-in-out hover:underline hover:text-accent">
-            <p class="z-10">Portfolio Website V2.</p>
-            <div class="hidden group-hover:flex gap-2">
-              <i class="devicon-react-original-wordmark colored text-xl md:text-1xl"></i>
-              <i class="devicon-tailwindcss-original colored text-xl md:text-1xl"></i>
+        <ul class="project-list border-t border-offwhite/20">
+
+          <li data-aos="fade-up">
+            <a href="https://jeomatee.netlify.app" target="_blank" rel="noopener noreferrer" class="project-row group"
+              data-preview="joematee" data-index="01" data-type="Business website">
+              <span class="row-wipe border-b border-accent bg-accent/10"></span>
+              <span class="row-index">01</span>
+              <span class="row-title group-hover:text-accent">Joematee Nigeria Limited</span>
+              <span class="row-tech" aria-hidden="true">
+                <i class="devicon-vitejs-plain"></i>
+                <i class="devicon-html5-plain colored"></i>
+                <i class="devicon-tailwindcss-original colored"></i>
+                <i class="devicon-javascript-plain colored"></i>
+              </span>
+              <span class="row-hint">Live site</span>
+              <svg class="row-icon row-icon--arrow group-hover:text-accent" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>
+            </a>
+          </li>
+
+          <li data-aos="fade-up">
+            <a href="https://ovic-evergreen-academy.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-row group"
+              data-preview="ovic" data-index="02" data-type="School website">
+              <span class="row-wipe border-b border-accent bg-accent/10"></span>
+              <span class="row-index">02</span>
+              <span class="row-title group-hover:text-accent">Ovic Evergreen Academy</span>
+              <span class="row-tech" aria-hidden="true">
+                <i class="devicon-html5-plain colored"></i>
+                <i class="devicon-css3-plain colored"></i>
+                <i class="devicon-javascript-plain colored"></i>
+              </span>
+              <span class="row-hint">Live site</span>
+              <svg class="row-icon row-icon--arrow group-hover:text-accent" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>
+            </a>
+          </li>
+
+          <li data-aos="fade-up">
+            <div class="project-row group is-static" data-preview="recipes" data-index="03" data-type="Recipe platform · Django">
+              <span class="row-wipe border-b border-accent bg-accent/10"></span>
+              <span class="row-index">03</span>
+              <span class="row-title group-hover:text-accent" data-row-title>Recipe Sharing Platform</span>
+              <span class="row-tech" aria-hidden="true">
+                <i class="devicon-django-plain"></i>
+                <i class="devicon-tailwindcss-original colored"></i>
+                <i class="devicon-javascript-plain colored"></i>
+                <i class="devicon-sqlite-plain"></i>
+              </span>
+              <span class="row-hint">In progress</span>
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-              stroke-width="1.5" stroke="currentColor"
-              class="size-6 z-10 transform transition-all duration-500 ease-in-out group-hover:translate-x-2 group-hover:rotate-25">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-            </svg>
-          </a>
-          <div class="preview-image hidden md:block absolute top-[-100%] left-1/2 ml-5 w-48 h-32 opacity-0 pointer-events-none z-50 transform scale-[200%] rounded-lg shadow-lg overflow-hidden">
-            <img src="/src/img/portfolio-portfolio.jpg" alt="Preview" class="w-full h-full object-cover">
-          </div>
-        </div>
+          </li>
+
+          <li data-aos="fade-up">
+            <div class="project-row group is-static" data-preview="portfolio-v2" data-index="04" data-type="Portfolio · React">
+              <span class="row-wipe border-b border-accent bg-accent/10"></span>
+              <span class="row-index">04</span>
+              <span class="row-title group-hover:text-accent" data-row-title>Portfolio Website V2</span>
+              <span class="row-tech" aria-hidden="true">
+                <i class="devicon-react-original colored"></i>
+                <i class="devicon-tailwindcss-original colored"></i>
+              </span>
+              <span class="row-hint">In progress</span>
+            </div>
+          </li>
+        </ul>
       </div>
 
 
       <!-- other noteworthy section -->
       <div class="px-6 md:px-20 py-10 text-offwhite mx-5 my-5 md:mx-10 md:my-10">
-          <h2 class="text-3xl md:text-4xl font-bold text-offwhite mb-10 text-center">Other Noteworthy Projects</h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <!-- Project 1 -->
-            <div class="group  rounded-2xl p-6 shadow-lg hover:shadow-xl hover:bg-offwhite/10 transition-all duration-300 ease-in-out">
-              <div class="flex justify-between items-center mb-3">
-                <h3 class="text-xl font-semibold">LAPO MFB Chatbot Frontend</h3>
-                <a href="https://github.com/Alex-web5?tab=overview&from=2025-06-01&to=2025-06-30" target="_blank" class="text-accent hover:text-white transition-colors duration-300">
-                  <i class="devicon-github-original text-2xl"></i>
-                </a>
-              </div>
-              <p class="text-sm text-gray-300 mb-4">A microfinance bot that answers FAQs, fetches loan info, and helps onboard users.</p>
-              <img src="./src/img/mfb-chatbot-portfolio.png" alt="" class="rounded-lg w-full mb-4 border border-accent">
-              <div class="flex flex-wrap gap-2 text-sm text-accent">
-                <span>Html</span>
-                <span>Css</span>
-                <span>JavaScript</span>
-              </div>
+        <h2 class="text-3xl md:text-4xl font-bold text-offwhite mb-10 text-center">Other Noteworthy Projects</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <!-- Project 1 -->
+          <div class="group rounded-2xl p-6 shadow-lg hover:shadow-xl hover:bg-offwhite/10 transition-all duration-300 ease-in-out">
+            <div class="flex justify-between items-center mb-3">
+              <h3 class="text-xl font-semibold">LAPO MFB Chatbot Frontend</h3>
+              <a href="https://github.com/Alex-web5" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" class="text-accent hover:text-white transition-colors duration-300">
+                <i class="devicon-github-original text-2xl"></i>
+              </a>
             </div>
-
-            <!-- Project 2 (Video Preview) -->
-            <div class="group rounded-2xl p-6 shadow-lg hover:shadow-xl hover:bg-offwhite/10 transition-all duration-300 ease-in-out">
-              <div class="flex justify-between items-center mb-3">
-                <h3 class="text-xl font-semibold">Beneficiary Information Management System</h3>
-                <a href="https://github.com/Alex-web5?tab=overview&from=2025-06-01&to=2025-06-30" target="_blank" class="text-accent hover:text-white transition-colors duration-300">
-                  <i class="devicon-github-original text-2xl"></i>
-                </a>
-              </div>
-              <p class="text-sm text-gray-300 mb-4">BIMS is a lightweight platform that helps you easily collect, manage, and track beneficiary data. It's fast and secure.</p>
-              <video class="rounded-lg w-full mb-4 border border-accent" autoplay muted loop>
-                <source src="/src/video/BIMS-portfolio-1.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              <div class="flex flex-wrap gap-2 text-sm text-accent">
-                <span>Django</span>
-                <span>Bootstrap</span>
-                <span>JavaScript</span>
-                <span>Sqlite</span>
-              </div>
+            <p class="text-sm text-gray-300 mb-4">A microfinance bot that answers FAQs, fetches loan info, and helps onboard users.</p>
+            <img src="./src/img/mfb-chatbot-portfolio.png" alt="LAPO MFB chatbot interface" loading="lazy" class="rounded-lg w-full mb-4 border border-accent">
+            <div class="flex flex-wrap gap-2 text-sm text-accent">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
             </div>
-
-            <!-- Project 3 -->
-            <div class="group rounded-2xl p-6 shadow-lg hover:shadow-xl hover:bg-offwhite/10 transition-all duration-300 ease-in-out">
-              <div class="flex justify-between items-center mb-3">
-                <h3 class="text-xl font-semibold">D. A. Alabi & Co</h3>
-                <a href="https://daablico.netlify.app/" target="_blank" class="text-accent hover:text-white transition-colors duration-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                    <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-                    <path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 0 1 0-1.113ZM17.25 12a5.25 5.25 0 1 1-10.5 0 5.25 5.25 0 0 1 10.5 0Z" clip-rule="evenodd" />
-                  </svg>
-
-
-                </a>
-              </div>
-              <p class="text-sm text-gray-300 mb-4">Redesigned and modernized the website for D. A. Alabi & Co. with a clean, professional look and improved user experience.</p>
-              <img src="./src/img/dabolico-portfolio.png" alt="" class="rounded-lg w-full mb-4 border border-accent">
-              <div class="flex flex-wrap gap-2 text-sm text-accent">
-                <span>HTML</span>
-                <span>BootstrapCss</span>
-                <span>JavaScript</span>
-              </div>
-            </div>
-
           </div>
+
+          <!-- Project 2 (Video Preview) -->
+          <div class="group rounded-2xl p-6 shadow-lg hover:shadow-xl hover:bg-offwhite/10 transition-all duration-300 ease-in-out">
+            <div class="flex justify-between items-center mb-3">
+              <h3 class="text-xl font-semibold">Beneficiary Information Management System</h3>
+              <a href="https://github.com/Alex-web5" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" class="text-accent hover:text-white transition-colors duration-300">
+                <i class="devicon-github-original text-2xl"></i>
+              </a>
+            </div>
+            <p class="text-sm text-gray-300 mb-4">BIMS is a lightweight platform that helps you easily collect, manage, and track beneficiary data. It's fast and secure.</p>
+            <video class="rounded-lg w-full mb-4 border border-accent" autoplay muted loop playsinline preload="metadata">
+              <source src="/src/video/BIMS-portfolio-1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="flex flex-wrap gap-2 text-sm text-accent">
+              <span>Django</span>
+              <span>Bootstrap</span>
+              <span>JavaScript</span>
+              <span>SQLite</span>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="group rounded-2xl p-6 shadow-lg hover:shadow-xl hover:bg-offwhite/10 transition-all duration-300 ease-in-out">
+            <div class="flex justify-between items-center mb-3">
+              <h3 class="text-xl font-semibold">D. A. Alabi &amp; Co</h3>
+              <a href="https://daablico.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="View D. A. Alabi &amp; Co live site" class="text-accent hover:text-white transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6" aria-hidden="true">
+                  <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                  <path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 0 1 0-1.113ZM17.25 12a5.25 5.25 0 1 1-10.5 0 5.25 5.25 0 0 1 10.5 0Z" clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+            <p class="text-sm text-gray-300 mb-4">Redesigned and modernized the website for D. A. Alabi &amp; Co. with a clean, professional look and improved user experience.</p>
+            <img src="./src/img/dabolico-portfolio.png" alt="D. A. Alabi &amp; Co website" loading="lazy" class="rounded-lg w-full mb-4 border border-accent">
+            <div class="flex flex-wrap gap-2 text-sm text-accent">
+              <span>HTML</span>
+              <span>Bootstrap</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
-    <!-- contact section -->
-    <section class="py-16 text-center text-offwhite mx-5 my-5 md:mx-10 md:my-10" id="contact" data-aos="zoom-out" data-aos-duration="1000">
-      <div class="container mx-auto px-4 space-y-4 max-w-3xl">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
-        <p class="text-lg md:text-xl mb-6">Have a project, idea, or collaboration in mind? Whether you're a business owner, a startup founder, or just someone with a big idea. I'm excited to hear what you're working on. Let’s connect and make it happen.</p>
-        <a href="https://wa.me/+2349022500572?text=Hello%20Alexander%2C%20I%E2%80%99m%20interested%20in%20your%20web%20development%20services.%20Can%20we%20discuss%20further%3F
-            " target="_blank"
-          class="inline-block border border-offwhite text-offwhite font-semibold px-6 py-3 rounded-full shadow-lg hover:border-accent hover:text-accent transition duration-300">
-          Contact Me
-        </a>
+<!-- ===================== FREELANCE ===================== -->
+    <section class="px-5 py-16 md:px-10 md:py-24 text-offwhite" id="freelance">
+      <div class="max-w-6xl mx-auto">
+
+        <div class="relative pl-6 text-xl md:text-3xl tracking-wide py-2
+          before:content-[''] before:absolute before:left-0 before:top-1/2
+          before:-translate-y-1/2 before:w-1 before:h-6 before:bg-accent mb-12 md:mb-16"
+          data-aos="fade-up">
+          Freelance
+        </div>
+
+        <div class="grid lg:grid-cols-[1fr_1.25fr] gap-12 lg:gap-20">
+
+          <!-- Left: pitch (sticks while the services scroll past) -->
+          <div class="lg:sticky lg:top-28 lg:self-start" data-aos="fade-right">
+            <span class="inline-flex items-center gap-2 rounded-full border border-accent/60 px-4 py-1 text-sm font-mono tracking-wide mb-6">
+              <span class="relative flex h-2 w-2">
+                <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75"></span>
+                <span class="relative inline-flex h-2 w-2 rounded-full bg-accent"></span>
+              </span>
+              Open to selected projects
+            </span>
+
+            <h2 class="text-5xl md:text-7xl leading-[0.95] mb-6">
+              Need a web presence
+              <span class="italic text-accent">that actually works?</span>
+            </h2>
+
+            <p class="text-lg md:text-xl text-gray-400 leading-relaxed max-w-md mb-8">
+              Alongside my full-time work, I take on a limited number of independent projects for businesses and founders who want something fast, polished and built to last.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="https://wa.me/+2349022500572?text=Hello%20Alexander%2C%20I%E2%80%99m%20interested%20in%20your%20freelance%20web%20development%20services.%20Can%20we%20discuss%20my%20project%3F"
+                target="_blank" rel="noopener noreferrer"
+                class="group inline-flex items-center justify-center gap-3 rounded-full bg-accent px-6 py-3 text-primary font-semibold
+                      transition duration-300 hover:scale-105">
+                Discuss a project
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"
+                  class="size-5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
+              </a>
+              <a href="#portfolio"
+                class="inline-flex items-center justify-center rounded-full border border-offwhite/40 px-6 py-3
+                      hover:border-accent hover:text-accent transition duration-300">
+                See my work
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: services -->
+          <ul class="group/list border-t border-offwhite/20" data-aos="fade-up">
+
+            <li class="group relative border-b border-offwhite/20 py-8 md:py-10 transition-opacity duration-500
+                      group-hover/list:opacity-40 hover:!opacity-100
+                      after:content-[''] after:absolute after:left-0 after:-bottom-px after:h-px after:w-0 after:bg-accent
+                      after:transition-all after:duration-700 hover:after:w-full">
+              <div class="flex gap-5 md:gap-8">
+                <span class="font-mono text-sm text-gray-500 pt-2 group-hover:text-accent transition-colors">01</span>
+                <div class="flex-1">
+                  <h3 class="text-3xl md:text-5xl leading-none mb-3 transition-all duration-500 group-hover:translate-x-3 group-hover:text-accent">
+                    Business websites
+                  </h3>
+                  <p class="text-gray-400 leading-relaxed max-w-lg mb-4">
+                    Clean, responsive, SEO-friendly sites for companies and institutions.
+                  </p>
+                  <div class="flex flex-wrap gap-2 text-xs font-mono text-accent opacity-60 group-hover:opacity-100 transition-opacity">
+                    <span class="rounded-full border border-accent/40 px-3 py-1">Responsive</span>
+                    <span class="rounded-full border border-accent/40 px-3 py-1">SEO</span>
+                    <span class="rounded-full border border-accent/40 px-3 py-1">Fast loading</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="group relative border-b border-offwhite/20 py-8 md:py-10 transition-opacity duration-500
+                      group-hover/list:opacity-40 hover:!opacity-100
+                      after:content-[''] after:absolute after:left-0 after:-bottom-px after:h-px after:w-0 after:bg-accent
+                      after:transition-all after:duration-700 hover:after:w-full">
+              <div class="flex gap-5 md:gap-8">
+                <span class="font-mono text-sm text-gray-500 pt-2 group-hover:text-accent transition-colors">02</span>
+                <div class="flex-1">
+                  <h3 class="text-3xl md:text-5xl leading-none mb-3 transition-all duration-500 group-hover:translate-x-3 group-hover:text-accent">
+                    Web apps &amp; dashboards
+                  </h3>
+                  <p class="text-gray-400 leading-relaxed max-w-lg mb-4">
+                    React/Next.js frontends and Django or .NET backends with role-based access.
+                  </p>
+                  <div class="flex flex-wrap gap-2 text-xs font-mono text-accent opacity-60 group-hover:opacity-100 transition-opacity">
+                    <span class="rounded-full border border-accent/40 px-3 py-1">Next.js</span>
+                    <span class="rounded-full border border-accent/40 px-3 py-1">Django</span>
+                    <span class="rounded-full border border-accent/40 px-3 py-1">.NET</span>
+                    <span class="rounded-full border border-accent/40 px-3 py-1">RBAC</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="group relative border-b border-offwhite/20 py-8 md:py-10 transition-opacity duration-500
+                      group-hover/list:opacity-40 hover:!opacity-100
+                      after:content-[''] after:absolute after:left-0 after:-bottom-px after:h-px after:w-0 after:bg-accent
+                      after:transition-all after:duration-700 hover:after:w-full">
+              <div class="flex gap-5 md:gap-8">
+                <span class="font-mono text-sm text-gray-500 pt-2 group-hover:text-accent transition-colors">03</span>
+                <div class="flex-1">
+                  <h3 class="text-3xl md:text-5xl leading-none mb-3 transition-all duration-500 group-hover:translate-x-3 group-hover:text-accent">
+                    Redesigns &amp; upgrades
+                  </h3>
+                  <p class="text-gray-400 leading-relaxed max-w-lg mb-4">
+                    Modernising existing sites for better look, speed and usability.
+                  </p>
+                  <div class="flex flex-wrap gap-2 text-xs font-mono text-accent opacity-60 group-hover:opacity-100 transition-opacity">
+                    <span class="rounded-full border border-accent/40 px-3 py-1">UI refresh</span>
+                    <span class="rounded-full border border-accent/40 px-3 py-1">Performance</span>
+                    <span class="rounded-full border border-accent/40 px-3 py-1">Usability</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- How I work -->
+        <div class="mt-20 md:mt-28">
+          <p class="font-mono text-accent text-sm tracking-widest uppercase mb-8" data-aos="fade-up">How I work</p>
+
+          <ol class="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
+
+            <li class="group relative pt-6 border-t border-offwhite/20 transition-colors duration-500 hover:border-accent" data-aos="fade-up">
+              <span class="absolute -top-[5px] left-0 size-[9px] rounded-full bg-offwhite/30 transition-all duration-500
+                          group-hover:bg-accent group-hover:shadow-[0_0_14px_3px_rgba(255,255,255,0.35)]"></span>
+              <p class="font-mono text-xs text-gray-500 mb-2">STEP 01</p>
+              <h4 class="text-3xl mb-2">Discover</h4>
+              <p class="text-gray-400 leading-relaxed">We talk through your goals, your users and what success looks like.</p>
+            </li>
+
+            <li class="group relative pt-6 border-t border-offwhite/20 transition-colors duration-500 hover:border-accent" data-aos="fade-up" data-aos-delay="100">
+              <span class="absolute -top-[5px] left-0 size-[9px] rounded-full bg-offwhite/30 transition-all duration-500
+                          group-hover:bg-accent group-hover:shadow-[0_0_14px_3px_rgba(255,255,255,0.35)]"></span>
+              <p class="font-mono text-xs text-gray-500 mb-2">STEP 02</p>
+              <h4 class="text-3xl mb-2">Design</h4>
+              <p class="text-gray-400 leading-relaxed">I sketch the structure and look, and you review it before any heavy building.</p>
+            </li>
+
+            <li class="group relative pt-6 border-t border-offwhite/20 transition-colors duration-500 hover:border-accent" data-aos="fade-up" data-aos-delay="200">
+              <span class="absolute -top-[5px] left-0 size-[9px] rounded-full bg-offwhite/30 transition-all duration-500
+                          group-hover:bg-accent group-hover:shadow-[0_0_14px_3px_rgba(255,255,255,0.35)]"></span>
+              <p class="font-mono text-xs text-gray-500 mb-2">STEP 03</p>
+              <h4 class="text-3xl mb-2">Build</h4>
+              <p class="text-gray-400 leading-relaxed">Clean, maintainable code, with regular check-ins so there are no surprises.</p>
+            </li>
+
+            <li class="group relative pt-6 border-t border-offwhite/20 transition-colors duration-500 hover:border-accent" data-aos="fade-up" data-aos-delay="300">
+              <span class="absolute -top-[5px] left-0 size-[9px] rounded-full bg-offwhite/30 transition-all duration-500
+                          group-hover:bg-accent group-hover:shadow-[0_0_14px_3px_rgba(255,255,255,0.35)]"></span>
+              <p class="font-mono text-xs text-gray-500 mb-2">STEP 04</p>
+              <h4 class="text-3xl mb-2">Launch</h4>
+              <p class="text-gray-400 leading-relaxed">We deploy, test on real devices, and I hand over everything you need.</p>
+            </li>
+          </ol>
+        </div>
+
       </div>
     </section>
 
-    <!-- footer -->
-     <section class="mx-5 my-5 md:mx-10 md:my-2">
-      <div>
-        <p class="text-center text-offwhite text-sm md:text-sm">Designed & Developed by Okpeku Alexander .</p>
-      </div>
-     </section>
+    <!-- ===================== CONTACT ===================== -->
+    <section class="relative px-5 py-20 md:px-10 md:py-32 text-offwhite overflow-hidden" id="contact">
 
+      <!-- soft accent glow behind the headline -->
+      <div class="pointer-events-none absolute left-1/2 top-24 -translate-x-1/2 w-[min(46rem,90vw)] h-72 rounded-full bg-accent/10 blur-3xl" aria-hidden="true"></div>
+
+      <div class="relative max-w-5xl mx-auto text-center">
+
+        <span class="inline-flex items-center gap-2 rounded-full border border-accent/60 px-4 py-1 text-sm font-mono tracking-wide mb-8" data-aos="fade-up">
+          <span class="relative flex h-2 w-2">
+            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75"></span>
+            <span class="relative inline-flex h-2 w-2 rounded-full bg-accent"></span>
+          </span>
+          Available for new opportunities
+        </span>
+
+        <h2 class="text-6xl md:text-8xl lg:text-9xl leading-[0.9] mb-8" data-aos="fade-up" data-aos-delay="100">
+          Let's build
+          <span class="block italic text-accent">something great.</span>
+        </h2>
+
+        <p class="text-lg md:text-2xl text-gray-400 leading-relaxed max-w-2xl mx-auto mb-10" data-aos="fade-up" data-aos-delay="200">
+          Hiring for a full-stack or frontend engineering role? Or have a project in mind? Send me a message and I'll get back to you.
+        </p>
+
+        <!-- Primary CTA -->
+        <div data-aos="fade-up" data-aos-delay="300">
+          <a href="https://wa.me/+2349022500572?text=Hello%20Alexander%2C%20I%E2%80%99d%20like%20to%20get%20in%20touch."
+            target="_blank" rel="noopener noreferrer"
+            class="group inline-flex items-center gap-4 rounded-full bg-accent px-8 py-4 text-lg md:text-xl font-semibold text-primary
+                  transition duration-300 hover:scale-105">
+            Message me on WhatsApp
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"
+              class="size-6 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:-rotate-45" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Secondary links -->
+        <div class="mt-16 md:mt-24 grid sm:grid-cols-3 gap-4 text-left group/list" data-aos="fade-up">
+
+          <a href="/cv/ALEXANDER_OKPEKU_CV.pdf" download
+            class="group relative overflow-hidden rounded-2xl border border-offwhite/15 bg-offwhite/5 p-6 md:p-8
+                  transition-all duration-500 hover:border-accent/60 hover:bg-accent/10 hover:-translate-y-1
+                  sm:group-hover/list:opacity-50 sm:hover:!opacity-100">
+            <p class="font-mono text-xs tracking-widest text-gray-500 group-hover:text-accent transition-colors mb-6">RESUME</p>
+            <div class="flex items-end justify-between gap-4">
+              <span class="text-3xl md:text-4xl leading-none">Download CV</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                class="size-7 shrink-0 text-accent transition-transform duration-500 group-hover:translate-y-1" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+              </svg>
+            </div>
+          </a>
+
+          <a href="https://github.com/Alex-web5" target="_blank" rel="noopener noreferrer"
+            class="group relative overflow-hidden rounded-2xl border border-offwhite/15 bg-offwhite/5 p-6 md:p-8
+                  transition-all duration-500 hover:border-accent/60 hover:bg-accent/10 hover:-translate-y-1
+                  sm:group-hover/list:opacity-50 sm:hover:!opacity-100">
+            <p class="font-mono text-xs tracking-widest text-gray-500 group-hover:text-accent transition-colors mb-6">CODE</p>
+            <div class="flex items-end justify-between gap-4">
+              <span class="text-3xl md:text-4xl leading-none">GitHub</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                class="size-7 shrink-0 text-accent transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+              </svg>
+            </div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/alexander-okpeku-35a0741b3" target="_blank" rel="noopener noreferrer"
+              class="group relative overflow-hidden rounded-2xl border border-offwhite/15 bg-offwhite/5 p-6 md:p-8
+                    transition-all duration-500 hover:border-accent/60 hover:bg-accent/10 hover:-translate-y-1
+                    sm:group-hover/list:opacity-50 sm:hover:!opacity-100">
+              <p class="font-mono text-xs tracking-widest text-gray-500 group-hover:text-accent transition-colors mb-6">NETWORK</p>
+              <div class="flex items-end justify-between gap-4">
+                <span class="text-3xl md:text-4xl leading-none">LinkedIn</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                  class="size-7 shrink-0 text-accent transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                </svg>
+              </div>
+            </a>
+        </div>
+
+        <!-- Local time -->
+        <div class="mt-16 md:mt-20 pt-6 border-t border-offwhite/15 flex items-center justify-center gap-2 text-sm font-mono text-gray-400" data-aos="fade-up">
+          <span class="size-1.5 rounded-full bg-accent"></span>
+          Lagos, Nigeria · <span id="lagos-time" class="text-offwhite">--:--</span> local time
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== fOOTER ===================== -->
+    <footer class="relative mx-5 md:mx-10 mt-10 mb-5 text-offwhite">
+
+      <!-- accent line that fades out at both ends -->
+      <div class="h-px w-full bg-gradient-to-r from-transparent via-accent/60 to-transparent" aria-hidden="true"></div>
+
+      <div class="max-w-6xl mx-auto px-2 pt-14 pb-8">
+
+        <div class="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
+
+          <!-- Brand -->
+          <div>
+            <a href="#home" class="inline-block text-5xl md:text-6xl leading-none">
+              Alexander<span class="italic text-accent">.dev</span>
+            </a>
+            <p class="mt-4 max-w-sm text-lg text-gray-400 leading-relaxed">
+              Full-stack developer building secure, well-crafted products from Lagos, Nigeria.
+            </p>
+          </div>
+
+          <!-- Navigate -->
+          <nav aria-label="Footer">
+            <p class="font-mono text-xs tracking-widest text-gray-500 mb-5">NAVIGATE</p>
+            <ul class="space-y-3 text-xl">
+              <li><a href="#about" class="group inline-flex items-center gap-2 hover:text-accent transition-colors"><span class="h-px w-0 bg-accent transition-all duration-300 group-hover:w-4"></span>About</a></li>
+              <li><a href="#experience" class="group inline-flex items-center gap-2 hover:text-accent transition-colors"><span class="h-px w-0 bg-accent transition-all duration-300 group-hover:w-4"></span>Experience</a></li>
+              <li><a href="#portfolio" class="group inline-flex items-center gap-2 hover:text-accent transition-colors"><span class="h-px w-0 bg-accent transition-all duration-300 group-hover:w-4"></span>Projects</a></li>
+              <li><a href="#freelance" class="group inline-flex items-center gap-2 hover:text-accent transition-colors"><span class="h-px w-0 bg-accent transition-all duration-300 group-hover:w-4"></span>Freelance</a></li>
+              <li><a href="#contact" class="group inline-flex items-center gap-2 hover:text-accent transition-colors"><span class="h-px w-0 bg-accent transition-all duration-300 group-hover:w-4"></span>Contact</a></li>
+            </ul>
+          </nav>
+
+          <!-- Connect -->
+          <div>
+            <p class="font-mono text-xs tracking-widest text-gray-500 mb-5">CONNECT</p>
+            <ul class="space-y-3 text-xl">
+              <li>
+                <a href="https://wa.me/+2349022500572?text=Hello%20Alexander%2C%20I%E2%80%99d%20like%20to%20get%20in%20touch."
+                  target="_blank" rel="noopener noreferrer"
+                  class="group inline-flex items-center gap-2 hover:text-accent transition-colors">
+                  WhatsApp
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    class="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/Alex-web5" target="_blank" rel="noopener noreferrer"
+                  class="group inline-flex items-center gap-2 hover:text-accent transition-colors">
+                  GitHub
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    class="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="/cv/ALEXANDER_OKPEKU_CV.pdf" download
+                  class="group inline-flex items-center gap-2 hover:text-accent transition-colors">
+                  Resume
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    class="size-4 transition-transform duration-300 group-hover:translate-y-0.5" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+                  </svg>
+                </a>
+              </li>
+              <!-- Add LinkedIn here when you have the URL, same pattern as above -->
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="mt-14 pt-6 border-t border-offwhite/15 flex flex-col md:flex-row items-center justify-between gap-3 text-sm font-mono text-gray-500 text-center md:text-left">
+          <p>© <span id="year">2026</span> Okpeku Alexander. All rights reserved.</p>
+          <p>Designed &amp; developed by me</p>
+        </div>
+
+      </div>
+    </footer>
+
+
+
+    <!-- ============ Hover preview (one shared element) ============ -->
+    <div id="project-preview" aria-hidden="true">
+      <div class="pv-frame">
+        <img class="pv-layer" data-for="admin"        src="/src/img/backoffice.png" alt="" loading="lazy" decoding="async">
+        <img class="pv-layer" data-for="rib"          src="/src/img/lapo-rib.png"          alt="" loading="lazy" decoding="async">
+        <img class="pv-layer" data-for="cib"          src="/src/img/lapo-cib.png"          alt="" loading="lazy" decoding="async">
+        <img class="pv-layer" data-for="lapo-web"     src="/src/img/lapo-website.png"      alt="" loading="lazy" decoding="async">
+        <img class="pv-layer" data-for="joematee"     src="/src/img/joematee-portfolio.png" alt="" loading="lazy" decoding="async">
+        <img class="pv-layer" data-for="ovic"         src="/src/img/ovic-portfolio.png"    alt="" loading="lazy" decoding="async">
+        <img class="pv-layer" data-for="recipes"      src="/src/img/xander-food-portfolio.png" alt="" loading="lazy" decoding="async">
+        <img class="pv-layer" data-for="portfolio-v2" src="/src/img/portfolio-portfolio.jpg" alt="" loading="lazy" decoding="async">
+        <div class="pv-caption"><span data-pv-index></span><span data-pv-type></span></div>
+      </div>
+    </div>
+
+    <!-- ============ Case-study popup ============ -->
+    <dialog id="case-modal" class="case-dialog" aria-labelledby="case-title">
+      <div class="case-panel bg-primary text-offwhite" data-case-scroll>
+
+        <div class="sticky top-0 z-10 flex items-center justify-between px-6 md:px-12 py-4 bg-primary/85 backdrop-blur-md border-b border-offwhite/10">
+          <span class="font-mono text-xs tracking-widest text-gray-400 uppercase">Case study</span>
+          <button type="button" data-case-close aria-label="Close case study"
+            class="grid size-10 place-items-center rounded-full border border-offwhite/20 hover:border-accent hover:text-accent hover:rotate-90 transition duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
+          </button>
+        </div>
+
+        <div class="case-body" data-case-body></div>
+
+        <div class="flex flex-wrap items-center justify-between gap-4 px-6 md:px-12 py-6 border-t border-offwhite/10">
+          <button type="button" data-case-close class="text-gray-400 hover:text-accent transition-colors">← Back to projects</button>
+          <button type="button" data-case-next
+            class="inline-flex items-center gap-3 rounded-full border border-offwhite/30 px-5 py-3 hover:border-accent hover:text-accent transition duration-300">
+            Next: <span data-case-next-label></span> →
+          </button>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- ============ Case-study content ============ -->
+    <template id="case-admin">
+      <div class="case-hero" data-case-hero></div>
+      <p class="case-eyebrow text-accent">01 · Core squad · Back-office</p>
+      <h3 id="case-title" class="case-title">Omnichannel Back-Office Admin Portal</h3>
+      <p class="case-lead">The control room for LAPO's mobile and internet banking: monitoring, KYC governance, access control and audit in one place.</p>
+
+      <dl class="case-meta">
+        <div><dt>My role</dt><dd>Backend owner &amp; frontend engineer</dd></div>
+        <div><dt>Squad</dt><dd>Core (Retail)</dd></div>
+        <div><dt>Status</dt><dd>In production</dd></div>
+        <div><dt>Users</dt><dd>LAPO back-office staff</dd></div>
+      </dl>
+
+      <h4 class="case-label text-accent">Overview</h4>
+      <p>Mobile and internet banking produce a constant stream of transactions, customer requests and compliance obligations. The portal gives LAPO's staff one place to monitor that activity, govern KYC, manage customers and devices, and keep an auditable record of every administrative action.</p>
+
+      <h4 class="case-label text-accent">My involvement</h4>
+      <ul class="case-list">
+        <li>Took over ownership of the <strong>.NET 10 backend</strong> (ASP.NET Core Web API, EF Core, SQL Server) after the original developer left, and continue to maintain and extend it.</li>
+        <li>Evolve the <strong>Next.js / TypeScript frontend</strong> alongside the API, so features ship across both layers.</li>
+        <li>Delivered the modules below and implemented the role-based access control that governs them.</li>
+      </ul>
+
+      <h4 class="case-label text-accent">What the portal does</h4>
+      <ul class="case-list">
+        <li><strong>Monitoring</strong>: dashboard monitoring and transaction management.</li>
+        <li><strong>Customers &amp; KYC</strong>: customer management, KYC tier-upgrade approval, account opening, BVN watchlist and liveness administration.</li>
+        <li><strong>Support &amp; operations</strong>: complaints, device and card management, referrals and reporting.</li>
+      </ul>
+
+      <h4 class="case-label text-accent">Access control &amp; audit</h4>
+      <p>Access is governed by role-based access control across five roles. The interface is permission-gated, so each role only sees and acts on what it should. Sessions have timeout handling, and every administrative action is recorded in an immutable audit-log trail.</p>
+      <div class="case-chips mt-4">
+        <span class="case-chip text-accent border-accent/40">User Admin</span>
+        <span class="case-chip text-accent border-accent/40">Digital Banking Admin</span>
+        <span class="case-chip text-accent border-accent/40">Compliance Officer</span>
+        <span class="case-chip text-accent border-accent/40">Customer Support</span>
+        <span class="case-chip text-accent border-accent/40">Auditor</span>
+      </div>
+
+      <h4 class="case-label text-accent">Tech stack</h4>
+      <div class="case-chips">
+        <span class="case-chip text-accent border-accent/40">Next.js</span>
+        <span class="case-chip text-accent border-accent/40">TypeScript</span>
+        <span class="case-chip text-accent border-accent/40">.NET 10</span>
+        <span class="case-chip text-accent border-accent/40">ASP.NET Core Web API</span>
+        <span class="case-chip text-accent border-accent/40">EF Core</span>
+        <span class="case-chip text-accent border-accent/40">SQL Server</span>
+      </div>
+
+      <!-- EDIT: add "Challenges & decisions" and "Outcome" sections here (real metrics, hard problems, what you'd do differently).
+          Copy the h4.case-label + p / ul.case-list pattern above. -->
+    </template>
+
+    <template id="case-rib">
+      <div class="case-hero" data-case-hero></div>
+      <p class="case-eyebrow text-accent">02 · Core squad · Customer-facing</p>
+      <h3 id="case-title" class="case-title">Retail Internet Banking (RIB)</h3>
+      <p class="case-lead">The web channel where LAPO's retail customers onboard, move money and manage their accounts.</p>
+
+      <dl class="case-meta">
+        <div><dt>My role</dt><dd>Frontend engineer</dd></div>
+        <div><dt>Squad</dt><dd>Core (Retail)</dd></div>
+        <div><dt>Status</dt><dd>In production</dd></div>
+        <div><dt>Users</dt><dd>LAPO retail customers</dd></div>
+      </dl>
+
+      <h4 class="case-label text-accent">Overview</h4>
+      <p>Retail Internet Banking is LAPO's customer-facing web banking app. It covers the whole journey from first-time onboarding to everyday banking, built as a Next.js application.</p>
+
+      <h4 class="case-label text-accent">My involvement</h4>
+      <ul class="case-list">
+        <li>Build and maintain the web app as a frontend engineer in the Core squad.</li>
+        <li>Implement customer journeys end to end in the interface, from verification flows to statements.</li>
+      </ul>
+
+      <h4 class="case-label text-accent">Customer journeys</h4>
+      <ul class="case-list">
+        <li><strong>Onboarding &amp; security</strong>: BVN verification, OTP, security questions and PIN setup.</li>
+        <li><strong>Money movement</strong>: transfers, bill payments and standing orders.</li>
+        <li><strong>Savings &amp; credit</strong>: savings, fixed deposits and loans.</li>
+        <li><strong>Account servicing</strong>: statements, KYC and support.</li>
+      </ul>
+
+      <h4 class="case-label text-accent">Tech stack</h4>
+      <div class="case-chips">
+        <span class="case-chip text-accent border-accent/40">Next.js</span>
+        <span class="case-chip text-accent border-accent/40">React</span>
+        <span class="case-chip text-accent border-accent/40">Axios</span>
+        <span class="case-chip text-accent border-accent/40">Framer Motion</span>
+      </div>
+
+      <!-- EDIT: add "Challenges & decisions" and "Outcome" (e.g. performance, UX decisions, security considerations). -->
+    </template>
+
+    <template id="case-cib">
+      <div class="case-hero" data-case-hero></div>
+      <p class="case-eyebrow text-accent">03 · Nexus squad · LAPO Business</p>
+      <h3 id="case-title" class="case-title">Corporate Internet Banking (CIB)</h3>
+      <p class="case-lead">The web banking channel for LAPO's business customers.</p>
+
+      <dl class="case-meta">
+        <div><dt>My role</dt><dd>Frontend engineer</dd></div>
+        <div><dt>Squad</dt><dd>Nexus (LAPO Business)</dd></div>
+        <div><dt>Status</dt><dd>In production</dd></div>
+        <div><dt>Users</dt><dd>Business customers</dd></div>
+      </dl>
+
+      <h4 class="case-label text-accent">Overview</h4>
+      <p>Corporate Internet Banking serves LAPO's business customers. As part of the Nexus squad I build frontend features for the web application in Next.js and TypeScript.</p>
+
+      <h4 class="case-label text-accent">My involvement</h4>
+      <ul class="case-list">
+        <li>Build frontend features for the Corporate Internet Banking web application.</li>
+        <!-- EDIT: name the actual features/modules you shipped. -->
+      </ul>
+
+      <h4 class="case-label text-accent">Tech stack</h4>
+      <div class="case-chips">
+        <span class="case-chip text-accent border-accent/40">Next.js</span>
+        <span class="case-chip text-accent border-accent/40">TypeScript</span>
+      </div>
+    </template>
+
+    <template id="case-website">
+      <div class="case-hero" data-case-hero></div>
+      <p class="case-eyebrow text-accent">04 · Meridian squad · Internal process</p>
+      <h3 id="case-title" class="case-title">LAPO Website &amp; CMS</h3>
+      <p class="case-lead">LAPO's public website and the content tools behind it, plus the campaign sites and internal tools around it.</p>
+
+      <dl class="case-meta">
+        <div><dt>My role</dt><dd>Full-stack developer</dd></div>
+        <div><dt>Squad</dt><dd>Meridian (Internal process)</dd></div>
+        <div><dt>Status</dt><dd>Ongoing</dd></div>
+        <div><dt>Scope</dt><dd>Frontend, backend, CMS</dd></div>
+      </dl>
+
+      <h4 class="case-label text-accent">My involvement</h4>
+      <ul class="case-list">
+        <li>Maintain and ship updates to the <strong>LAPO website</strong> across frontend, backend and CMS.</li>
+        <li>Build <strong>marketing campaign websites</strong> for LAPO.</li>
+        <li>Support internal tools such as the <strong>customer onboarding platform</strong> and <strong>requisition portal</strong>.</li>
+        <li>Keep bank apps up to date as new internal solutions go live.</li>
+      </ul>
+
+      <h4 class="case-label text-accent">Tech stack</h4>
+      <div class="case-chips">
+        <span class="case-chip text-accent border-accent/40">Frontend</span>
+        <span class="case-chip text-accent border-accent/40">Backend</span>
+        <span class="case-chip text-accent border-accent/40">CMS</span>
+        <!-- EDIT: replace with the real technologies. -->
+      </div>
+    </template>
+
+        <!-- ============ Fun notifications (bottom right) ============ -->
+    <div id="notify" class="fixed bottom-4 right-4 z-[45] flex w-[min(22rem,calc(100vw-2rem))] flex-col items-end gap-3 pointer-events-none">
+
+      <article id="notify-toast" class="notify-toast pointer-events-auto w-full" role="status" aria-live="polite" hidden>
+        <div class="flex gap-4 p-4 pr-3">
+          <div class="grid size-12 shrink-0 place-items-center rounded-xl border border-accent/40 bg-accent/10 text-2xl" data-n-icon aria-hidden="true"></div>
+
+          <div class="min-w-0 flex-1">
+            <div class="flex items-center justify-between gap-2">
+              <p class="font-mono text-[11px] tracking-widest text-accent" data-n-label></p>
+              <div class="flex items-center gap-2">
+                <span class="font-mono text-[11px] text-gray-500" data-n-count></span>
+                <button type="button" data-n-close aria-label="Dismiss notification"
+                  class="grid size-6 place-items-center rounded-full text-gray-400 transition hover:bg-offwhite/10 hover:text-accent">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="size-4" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
+                </button>
+              </div>
+            </div>
+
+            <h4 class="mt-1 text-2xl leading-tight text-offwhite" data-n-title></h4>
+            <p class="mt-1 text-base leading-snug text-gray-400" data-n-text></p>
+
+            <div class="mt-3 flex items-center justify-between gap-3">
+              <a data-n-action hidden
+                class="inline-flex items-center gap-1.5 rounded-full border border-accent/50 px-3 py-1 text-sm text-accent transition hover:bg-accent hover:text-primary"></a>
+              <button type="button" data-n-mute class="ml-auto font-mono text-[11px] tracking-wide text-gray-500 transition hover:text-accent">
+                MUTE
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="notify-bar" data-n-bar aria-hidden="true"></div>
+      </article>
+
+      <button id="notify-bell" type="button" hidden
+        class="pointer-events-auto grid size-12 place-items-center rounded-full border border-offwhite/20 bg-primary/90 text-xl shadow-lg backdrop-blur-md transition duration-300 hover:scale-110 hover:border-accent"
+        aria-label="Replay fun facts about me" title="Replay fun facts">
+        🔔
+      </button>
+    </div>
 
     <script type="module" src="/src/main.js"></script>
-    <!-- Typed libery link -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <!-- Gsap link -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <!-- Aos link -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      const yr = document.getElementById('year');
+      if (yr) yr.textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
